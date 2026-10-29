@@ -8,7 +8,16 @@ on:
     - cron: "*/15 12-20 * * 0"
     # rund um die Uhr alle 2 Stunden: neue Push-Anmeldungen abholen
     - cron: "17 */2 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      kuerzel:
+        description: "Optional: Testnachricht an dieses Kürzel schicken"
+        required: false
+        default: ""
+      nachricht:
+        description: "Optional: Text der Testnachricht"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -36,6 +45,8 @@ jobs:
         run: python scraper/check.py
         env:
           WEBPUSH_KEY: ${{ secrets.WEBPUSH_KEY }}
+          TEST_KUERZEL: ${{ github.event.inputs.kuerzel }}
+          TEST_NACHRICHT: ${{ github.event.inputs.nachricht }}
 
       - name: Änderungen speichern
         run: |

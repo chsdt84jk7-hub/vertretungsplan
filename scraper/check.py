@@ -107,6 +107,18 @@ def main():
     state = json.loads(STATE.read_text()) if STATE.exists() else {"gesendet": {}}
     wp = WebPush(NTFY, PREFIX)
     wp.sync(state)
+    test_k = (os.environ.get("TEST_KUERZEL") or "").strip()
+    if test_k:  # einmalige Nachricht von Hand (Actions → Run workflow)
+        text = (os.environ.get("TEST_NACHRICHT") or "").strip() or f"Für {test_k} gibt es keine Änderungen im Vertretungsplan."
+        url = site_url()
+        n = wp.send(test_k, "Vertretungsplan", text, f"{url}?k={urllib.parse.quote(test_k)}" if url else "./")
+        print(f"Testnachricht an {test_k}: {n} Gerät(e) per Web Push erreicht.")
+        try:
+            requests.post(NTFY, data=json.dumps({"topic": f"{PREFIX}-{pp.topic_slug(test_k)}", "title": "Vertretungsplan",
+                                                  "message": text, "tags": ["school"]}).encode(),
+                          headers={"Content-Type": "application/json"}, timeout=20)
+        except Exception as e:
+            print(f"ntfy-Test fehlgeschlagen: {e}")
     try:
         run(now, heute, state, wp, dry)
     finally:
