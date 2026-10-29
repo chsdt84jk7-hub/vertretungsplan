@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vertretungsplan 62. OS</title>
+<meta name="theme-color" content="#1f3a5f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Vertretung">
+<style>
+:root{
+  --bg:#f4f1ea; --card:#fffdf8; --ink:#1d2430; --muted:#6b7280; --line:#e4ddd0;
+  --brand:#1f3a5f; --brand-ink:#fff; --act:#c2410c; --act-bg:#fff1e8; --ok:#15803d; --ok-bg:#ecf8ef;
+  --info-bg:#f1efe9; --radius:16px;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#12161d;--card:#1b212b;--ink:#e8eaee;--muted:#9aa3af;--line:#2b3340;--brand:#8fb3e0;--brand-ink:#0d1520;
+        --act:#fb923c;--act-bg:#2c1d14;--ok:#4ade80;--ok-bg:#14261b;--info-bg:#222934}
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+header{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:8px 0 16px}
+h1{font-size:1.35rem;margin:0;letter-spacing:-.01em}
+h1 span{color:var(--muted);font-weight:500}
+.upd{font-size:.8rem;color:var(--muted);white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:14px}
+label{font-size:.85rem;color:var(--muted);display:block;margin-bottom:6px}
+.krow{display:flex;gap:8px}
+input{flex:1;font:inherit;font-size:1.25rem;font-weight:600;letter-spacing:.04em;padding:10px 14px;border-radius:12px;
+  border:1.5px solid var(--line);background:var(--bg);color:var(--ink);min-width:0}
+input:focus{outline:none;border-color:var(--brand)}
+button,.btn{font:inherit;font-weight:600;border:0;border-radius:12px;padding:10px 16px;background:var(--brand);color:var(--brand-ink);
+  cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn.ghost{background:transparent;color:var(--brand);border:1.5px solid var(--line)}
+.tabs{display:flex;gap:8px;overflow-x:auto;margin-bottom:14px;padding-bottom:2px}
+.tab{flex:0 0 auto;background:var(--card);color:var(--ink);border:1.5px solid var(--line);padding:8px 14px;border-radius:999px;font-weight:600}
+.tab[aria-selected=true]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.tab .dot{width:8px;height:8px;border-radius:50%;background:var(--act);display:inline-block}
+.status{border-radius:12px;padding:14px 16px;font-weight:700;font-size:1.05rem;margin-bottom:12px;display:flex;gap:10px;align-items:center}
+.status.act{background:var(--act-bg);color:var(--act)}
+.status.ok{background:var(--ok-bg);color:var(--ok)}
+.status.none{background:var(--info-bg);color:var(--muted)}
+.meta{color:var(--muted);font-size:.85rem;margin:-4px 0 12px}
+ul.items{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+ul.items li{border-radius:12px;padding:10px 12px;background:var(--info-bg);border-left:4px solid var(--line)}
+ul.items li.act{background:var(--act-bg);border-left-color:var(--act)}
+.lbl{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--muted);display:block}
+li.act .lbl{color:var(--act)}
+h2{font-size:1rem;margin:16px 0 8px}
+.notes{margin:0;padding-left:18px;color:var(--ink)}
+.notes li{margin:4px 0}
+#pdf canvas{width:100%;height:auto;display:block;border-radius:8px;margin-top:10px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.small{font-size:.85rem;color:var(--muted)}
+code{background:var(--info-bg);padding:2px 6px;border-radius:6px;font-size:.9em;word-break:break-all}
+ol.steps{padding-left:20px;margin:8px 0}
+ol.steps li{margin:6px 0}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Vertretungsplan <span>62. OS</span></h1>
+    <div class="upd" id="upd"></div>
+  </header>
+
+  <section class="card">
+    <label for="k">Dein Lehrerkürzel</label>
+    <div class="krow">
+      <input id="k" list="klist" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="z. B. Kun" maxlength="6">
+      <datalist id="klist"></datalist>
+      <button id="go">Anzeigen</button>
+    </div>
+  </section>
+
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+
+  <section class="card" id="plan">
+    <div class="status none">Lade Vertretungsplan …</div>
+  </section>
+
+  <section class="card hidden" id="pushcard">
+    <h2 style="margin-top:0">🔔 Push-Benachrichtigungen</h2>
+    <p class="small" style="margin-top:0">Du bekommst eine Nachricht, sobald der Plan etwas für <b id="pk"></b> enthält, das du tun musst (Vertretung, Aufsicht, Betreuung, Aufgaben). Läuft über die kostenlose App <b>ntfy</b>, ohne Anmeldung.</p>
+    <ol class="steps">
+      <li>App installieren: <a id="store" target="_blank" rel="noopener">ntfy</a></li>
+      <li>Thema abonnieren: <a class="btn" id="sub" style="padding:6px 12px">In ntfy öffnen</a><br>
+        <span class="small">oder in der App auf „+“ tippen und eintragen: <code id="topic"></code></span></li>
+    </ol>
+    <p class="small">Am Computer geht es auch im Browser: <a id="web" target="_blank" rel="noopener">Thema im Browser öffnen</a> und dort Benachrichtigungen erlauben.</p>
+  </section>
+
+  <p class="small" style="text-align:center">Daten von der Schulwebsite, alle 5 Min. geprüft. Im Zweifel gilt der Aushang. · <a id="src" target="_blank" rel="noopener">Originalseite</a></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+const $ = s => document.querySelector(s);
+const store = { get(k){ try{return localStorage.getItem(k)}catch(e){return null} }, set(k,v){ try{localStorage.setItem(k,v)}catch(e){} } };
+const params = new URLSearchParams(location.search);
+let DATA = null, current = params.get('d'), kz = params.get('k') || store.get('kuerzel') || '';
+$('#k').value = kz;
+
+const slug = k => k.toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]/g,'');
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const findKey = (plan, k) => Object.keys(plan.lehrer||{}).find(x => x.toLowerCase() === k.toLowerCase());
+const today = () => new Date().toLocaleDateString('sv-SE', {timeZone:'Europe/Berlin'});
+
+async function load(){
+  let neu;
+  try{
+    const r = await fetch('data.json?t=' + Date.now(), {cache:'no-store'});
+    neu = await r.json();
+  }catch(e){
+    if(!DATA) $('#plan').innerHTML = '<div class="status none">Plan konnte nicht geladen werden. Bitte später erneut versuchen.</div>';
+    return;
+  }
+  if(DATA && DATA.aktualisiert === neu.aktualisiert && JSON.stringify(DATA.plaene) === JSON.stringify(neu.plaene)) return;
+  DATA = neu;
+  const t = new Date(DATA.aktualisiert);
+  $('#upd').textContent = 'Stand ' + t.toLocaleString('de-DE',{weekday:'short',hour:'2-digit',minute:'2-digit'});
+  $('#src').href = DATA.quelle;
+  const ks = new Set(); DATA.plaene.forEach(p => Object.keys(p.lehrer).forEach(k => ks.add(k)));
+  $('#klist').innerHTML = [...ks].sort().map(k => `<option value="${esc(k)}">`).join('');
+  const plaene = DATA.plaene.filter(p => p.datum >= today());
+  DATA.sichtbar = plaene.length ? plaene : DATA.plaene.slice(-1);
+  if(!DATA.sichtbar.find(p => p.datum === current)) current = DATA.sichtbar[0] && DATA.sichtbar[0].datum;
+  render();
+}
+
+function render(){
+  const k = kz.trim();
+  // Tabs
+  $('#tabs').innerHTML = DATA.sichtbar.map(p => {
+    const key = k && findKey(p, k);
+    const act = key && p.lehrer[key].some(i => i.handeln);
+    const kurz = p.titel.split(',')[0] + ' ' + p.datum.slice(8) + '.' + p.datum.slice(5,7) + '.';
+    return `<button class="tab" role="tab" aria-selected="${p.datum===current}" data-d="${p.datum}">${act?'<span class="dot"></span>':''}${esc(kurz)}</button>`;
+  }).join('');
+  document.querySelectorAll('.tab').forEach(b => b.onclick = () => { current = b.dataset.d; render(); });
+
+  const p = DATA.sichtbar.find(x => x.datum === current);
+  if(!p){ $('#plan').innerHTML = '<div class="status none">Aktuell ist kein Vertretungsplan veröffentlicht.</div>'; renderPush(k); return; }
+
+  let html = '';
+  const key = k && findKey(p, k);
+  const items = key ? p.lehrer[key] : [];
+  const act = items.filter(i => i.handeln), info = items.filter(i => !i.handeln);
+  if(!k) html += '<div class="status none">Gib oben dein Kürzel ein.</div>';
+  else if(act.length) html += `<div class="status act">⚠️ ${act.length === 1 ? 'Eine Sache' : act.length + ' Sachen'} für dich</div>`;
+  else if(info.length) html += '<div class="status ok">✓ Nichts zu tun – nur Infos</div>';
+  else html += `<div class="status ok">✓ Keine Änderungen für ${esc(k)}</div>`;
+  html += `<div class="meta">${esc(p.titel)}${p.woche ? ' · ' + esc(p.woche) : ''}${p.erstellt ? ' · erstellt ' + esc(p.erstellt) : ''}</div>`;
+  const li = i => `<li class="${i.handeln?'act':''}"><span class="lbl">${esc(i.label || ({aufsicht:'Aufsicht',aufsicht_frei:'Aufsicht',abwesend:'Abwesend',unklar:'Bitte prüfen'})[i.art] || '')}</span>${esc(i.text)}</li>`;
+  if(items.length) html += `<ul class="items">${act.map(li).join('')}${info.map(li).join('')}</ul>`;
+  if(p.hinweise && p.hinweise.length) html += `<h2>Zusätzliche Informationen</h2><ul class="notes">${p.hinweise.map(h => `<li>${esc(h)}</li>`).join('')}</ul>`;
+  html += `<h2>Ganzer Plan</h2><div class="row"><button class="btn ghost" id="showpdf">PDF anzeigen</button><a class="btn ghost" href="${p.pdf}" target="_blank" rel="noopener">PDF öffnen</a></div><div id="pdf"></div>`;
+  $('#plan').innerHTML = html;
+  $('#showpdf').onclick = () => showPdf(p.pdf);
+  renderPush(k);
+}
+
+function renderPush(k){
+  if(!k || !DATA.topic_prefix){ $('#pushcard').classList.add('hidden'); return; }
+  const topic = DATA.topic_prefix + '-' + slug(k);
+  const host = DATA.ntfy_server.replace(/^https?:\/\//,'');
+  $('#pk').textContent = k;
+  $('#topic').textContent = topic;
+  $('#sub').href = `ntfy://${host}/${topic}`;
+  $('#web').href = `${DATA.ntfy_server}/${topic}`;
+  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent), android = /Android/.test(navigator.userAgent);
+  $('#store').href = ios ? 'https://apps.apple.com/app/ntfy/id1625396347'
+    : android ? 'https://play.google.com/store/apps/details?id=io.heckel.ntfy' : 'https://ntfy.sh/docs/subscribe/phone/';
+  $('#store').textContent = ios ? 'ntfy im App Store' : android ? 'ntfy im Play Store' : 'ntfy (iPhone & Android)';
+  $('#pushcard').classList.remove('hidden');
+}
+
+async function showPdf(url){
+  const box = $('#pdf');
+  box.innerHTML = '<p class="small">Lade PDF …</p>';
+  try{
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    const doc = await pdfjsLib.getDocument(url + '?t=' + Date.now()).promise;
+    box.innerHTML = '';
+    for(let n = 1; n <= doc.numPages; n++){
+      const page = await doc.getPage(n);
+      const vp = page.getViewport({scale: 2});
+      const c = document.createElement('canvas'); c.width = vp.width; c.height = vp.height;
+      box.appendChild(c);
+      await page.render({canvasContext: c.getContext('2d'), viewport: vp}).promise;
+    }
+    $('#showpdf').classList.add('hidden');
+  }catch(e){
+    box.innerHTML = `<p class="small">PDF konnte nicht angezeigt werden. <a href="${url}" target="_blank" rel="noopener">Direkt öffnen</a></p>`;
+  }
+}
+
+function setK(){
+  kz = $('#k').value.trim();
+  store.set('kuerzel', kz);
+  const u = new URL(location); if(kz) u.searchParams.set('k', kz); else u.searchParams.delete('k'); u.searchParams.delete('d');
+  history.replaceState(null, '', u);
+  if(DATA) render();
+}
+$('#go').onclick = setK;
+$('#k').addEventListener('keydown', e => { if(e.key === 'Enter'){ setK(); e.target.blur(); } });
+$('#k').addEventListener('change', setK);
+
+load();
+setInterval(load, 5 * 60 * 1000);
+document.addEventListener('visibilitychange', () => { if(!document.hidden) load(); });
+if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
+</script>
+</body>
+</html>

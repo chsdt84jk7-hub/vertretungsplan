@@ -1,0 +1,47 @@
+name: Vertretungsplan prüfen
+
+on:
+  schedule:
+    # Mo–Fr alle 5 Minuten (GitHub-Minimum), ca. 5–21 Uhr deutscher Zeit (Zeiten in UTC)
+    - cron: "*/5 4-19 * * 1-5"
+    # Sonntagnachmittag/-abend für den Montagsplan
+    - cron: "*/15 12-20 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: vertretungsplan
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: scraper/requirements.txt
+
+      - run: pip install -r scraper/requirements.txt
+
+      - name: Plan abrufen, auswerten, Push senden
+        run: python scraper/check.py
+
+      - name: Änderungen speichern
+        run: |
+          git config user.name "vertretungsplan-bot"
+          git config user.email "vertretungsplan-bot@users.noreply.github.com"
+          git add -A docs state.json
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen."
+          else
+            git commit -m "Plan aktualisiert $(date -u +'%Y-%m-%d %H:%M') UTC"
+            git pull --rebase --quiet
+            git push
+          fi
