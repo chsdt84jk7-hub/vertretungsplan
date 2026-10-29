@@ -191,7 +191,7 @@ async function load(){
   if(DATA && DATA.aktualisiert === neu.aktualisiert && JSON.stringify(DATA.plaene) === JSON.stringify(neu.plaene)) return;
   DATA = neu;
   const t = new Date(DATA.aktualisiert);
-  $('#upd').textContent = 'Stand ' + t.toLocaleString('de-DE',{weekday:'short',hour:'2-digit',minute:'2-digit'});
+  $('#upd').textContent = 'Letzte Änderung ' + t.toLocaleString('de-DE',{weekday:'short',hour:'2-digit',minute:'2-digit'});
   $('#src').href = DATA.quelle;
   const ks = new Set(); DATA.plaene.forEach(p => Object.keys(p.lehrer).forEach(k => ks.add(k)));
   $('#klist').innerHTML = [...ks].sort().map(k => `<option value="${esc(k)}">`).join('');
