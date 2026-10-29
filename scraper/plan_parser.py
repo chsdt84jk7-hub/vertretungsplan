@@ -26,7 +26,22 @@ STOPS = ["Abwesende Lehrer:", "Abwesende Klassen:", "Lehrer mit Änderung:", "Kl
          "Geänderte Aufsichten:", "Klasse/Kurs", "Geänderte Unterrichtsstunden:"]
 
 
-def parse(text):
+def rows_from_tables(tables):
+    """Zeilen aus pdfplumber-Tabellen (Klasse, St., Fach, Lehrer, Raum, Info) – genauer als der Fließtext."""
+    out = []
+    for t in tables:
+        for r in t:
+            cells = [re.sub(r"\s+", " ", c or "").strip() for c in r]
+            if not cells or cells[0].startswith("Klasse"):
+                continue
+            if re.fullmatch(r"\d{1,2}[a-z](?:,\s?\d{1,2}[a-z])*", cells[0]) and len(cells) >= 2:
+                out.append(" ".join(c for c in cells if c))
+            elif out and any(cells):  # Fortsetzung einer Zeile über den Seitenumbruch
+                out[-1] += " " + " ".join(c for c in cells if c)
+    return out
+
+
+def parse(text, table_rows=None):
     plan = {"titel": "", "datum": None, "woche": "", "erstellt": "",
             "abwesend": [], "geaendert": [], "aufsichten": [], "zeilen": [], "hinweise": []}
     m = re.search(r"Vertretungsplan für\s+(\w+),\s*(\d{1,2})\.\s*(\w+)\s+(\d{4})(?:\s*\(([^)]*)\))?", text)
@@ -61,6 +76,12 @@ def parse(text):
             offen = []
     if offen and plan["zeilen"]:
         plan["zeilen"][-1] = _zeile(plan["zeilen"][-1]["roh"] + " " + " ".join(offen))
+    if table_rows:  # Tabellen aus dem PDF haben Vorrang; Zeilen, die die Tabellenerkennung verpasst, kommen aus dem Text
+        tab = [_zeile(r) for r in table_rows]
+        keys = {(z["klasse"], z["std"]) for z in tab}
+        extra = [z for z in plan["zeilen"] if (z["klasse"], z["std"]) not in keys]
+        reihenfolge = {(z["klasse"], z["std"]): i for i, z in enumerate(plan["zeilen"])}
+        plan["zeilen"] = sorted(tab + extra, key=lambda z: reihenfolge.get((z["klasse"], z["std"]), 10**6))
     plan["hinweise"] = [h.strip() for h in hinweise.splitlines() if h.strip() and not HEADER_SKIP.match(h.strip())]
     return plan
 

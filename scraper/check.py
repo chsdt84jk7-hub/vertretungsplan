@@ -47,6 +47,16 @@ def pdf_text(path):
         return "\n".join((p.extract_text(x_tolerance=1.5) or "") for p in pdf.pages)
 
 
+def pdf_rows(path):
+    with pdfplumber.open(path) as pdf:
+        tables = [t for p in pdf.pages for t in p.extract_tables()]
+    return pp.rows_from_tables(tables)
+
+
+def read_plan(path):
+    return pp.parse(pdf_text(path), pdf_rows(path))
+
+
 def find_pdfs(html):
     links = []
     for href in re.findall(r'href="([^"]+\.pdf)"', html, re.I):
@@ -80,7 +90,7 @@ def main():
         f = sys.argv[sys.argv.index("--dump") + 1]
         t = pdf_text(f)
         print(t)
-        print(json.dumps(pp.parse(t), ensure_ascii=False, indent=1))
+        print(json.dumps(read_plan(f), ensure_ascii=False, indent=1))
         return
 
     now = dt.datetime.now(TZ)
@@ -102,7 +112,7 @@ def main():
         raw = requests.get(l["url"], headers=UA, timeout=30).content
         local = PDFDIR / f"plan-{datum}.pdf"
         local.write_bytes(raw)
-        plan = pp.parse(pdf_text(local))
+        plan = read_plan(local)
         plan["datum"] = plan["datum"] or datum
         plan["pdf"] = f"pdf/plan-{datum}.pdf"
         plan["quelle"] = l["url"]
