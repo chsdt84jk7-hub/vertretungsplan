@@ -54,7 +54,7 @@ Die Prüfzeiten stehen in `.github/workflows/check.yml` (in UTC). Pläne für de
 ## Gut zu wissen
 
 - **Grenzen der Auswertung:** Die PDFs werden als Text gelesen. Bei ungewöhnlichen Einträgen kann eine Zuordnung danebenliegen. Steht ein Kürzel unter „Lehrer mit Änderung“ und das Skript findet keine passende Zeile, kommt sicherheitshalber „Bitte im PDF nachsehen“. Im Zweifel gilt der Aushang.
-- **Datenschutz:** Ausgewertet wird nur, was die Schule ohnehin öffentlich auf ihrer Website zeigt. ntfy-Themen sind nicht passwortgeschützt; wer den Themennamen kennt, kann mitlesen. Der Inhalt ist derselbe wie im öffentlichen Plan. Vor dem Verteilen an das Kollegium am besten kurz mit der Schulleitung abstimmen.
+- **Datenschutz:** Ausgewertet wird nur, was die Schule ohnehin öffentlich auf ihrer Website zeigt. Push-Nachrichten verschickt nur der Workflow mit dem geheimen Schlüssel; die Liste der angemeldeten Geräte liegt verschlüsselt in `subs.enc`. Vor dem Verteilen an das Kollegium am besten kurz mit der Schulleitung abstimmen.
 - **Pausen:** GitHub pausiert geplante Workflows, wenn 60 Tage lang nichts im Repository passiert ist. Während der Schulzeit passiert das nicht, weil jede Planänderung ein Commit ist. Nach langen Ferien ggf. unter **Actions** wieder aktivieren.
 - **Testen:** `python scraper/tests/test_parser.py` prüft den Parser an zwei echten Plänen. `python scraper/check.py --dry-run` läuft komplett durch, ohne Push zu senden. `python scraper/check.py --dump datei.pdf` zeigt, was aus einem PDF gelesen wird.
 - Die PDFs in `docs/pdf` und `docs/data.json` sind Beispieldaten. Sie werden beim ersten Lauf ersetzt.
