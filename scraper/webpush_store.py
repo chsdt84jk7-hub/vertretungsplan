@@ -86,12 +86,15 @@ class WebPush:
         for ep, s in list(self.subs.items()):
             if s["k"].lower() != k.lower():
                 continue
+            host = ep.split("/")[2]
             try:
-                webpush(subscription_info=s["sub"], data=payload, vapid_private_key=self._keyfile.name,
-                        vapid_claims={"sub": self.contact}, ttl=12 * 3600)
+                r = webpush(subscription_info=s["sub"], data=payload, vapid_private_key=self._keyfile.name,
+                            vapid_claims={"sub": self.contact}, ttl=12 * 3600, headers={"Urgency": "high"})
+                print(f"  -> {k} @ {host}: HTTP {getattr(r, 'status_code', '?')} {getattr(r, 'text', '')[:200]}")
                 sent += 1
             except WebPushException as e:
                 code = getattr(e.response, "status_code", None)
+                print(f"  -> {k} @ {host}: Fehler HTTP {code} {getattr(e.response, 'text', '')[:300]}")
                 if code in (404, 410):  # Abo abgelaufen oder vom Gerät entfernt
                     del self.subs[ep]
                     self.changed = True
