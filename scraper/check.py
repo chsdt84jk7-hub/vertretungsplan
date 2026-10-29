@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Prüft den Vertretungsplan, spiegelt die PDFs in docs/pdf, schreibt docs/data.json
-und schickt per ntfy eine Push-Nachricht an jedes Kürzel, das etwas tun muss.
+und schickt per Web Push (direkt in die App) und ntfy eine Push-Nachricht an jedes Kürzel, das etwas tun muss.
 
 Lokal testen:  python scraper/check.py --dry-run     (schickt keine Push-Nachrichten)
 Einzelnes PDF: python scraper/check.py --dump plan.pdf
@@ -20,6 +20,7 @@ import requests
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import plan_parser as pp  # noqa: E402
+from webpush_store import WebPush  # noqa: E402
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DOCS, STATE = ROOT / "docs", ROOT / "state.json"
@@ -68,20 +69,28 @@ def find_pdfs(html):
     return links
 
 
-def notify(k, plan, items, url, update):
-    topic = f"{PREFIX}-{pp.topic_slug(k)}"
+def notify(k, plan, items, url, update, wp):
     lines = [("• " + (i.get("label") + ": " if i.get("label") else "") + i["text"]) for i in items if i["handeln"]]
-    body = {
-        "topic": topic,
-        "title": ("Aktualisiert: " if update else "") + f"Vertretungsplan {plan['titel'].rsplit(' ', 1)[0]}",
-        "message": "\n".join(lines)[:3800],
-        "tags": ["school"],
-        "priority": 4,
-    }
-    if url:
-        body["click"] = f"{url}?k={urllib.parse.quote(k)}&d={plan['datum']}"
-    r = requests.post(NTFY, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"}, timeout=20)
-    r.raise_for_status()
+    title = ("Aktualisiert: " if update else "") + f"Vertretungsplan {plan['titel'].rsplit(' ', 1)[0]}"
+    message = "\n".join(lines)[:3800]
+    click = f"{url}?k={urllib.parse.quote(k)}&d={plan['datum']}" if url else ""
+    ok = False
+    # 1) direkt in der Web-App (Web Push)
+    try:
+        ok |= wp.send(k, title, message[:1500], click or "./") > 0
+    except Exception as e:
+        print(f"Web Push an {k} fehlgeschlagen: {e}")
+    # 2) zusätzlich über die ntfy-App
+    body = {"topic": f"{PREFIX}-{pp.topic_slug(k)}", "title": title, "message": message, "tags": ["school"], "priority": 4}
+    if click:
+        body["click"] = click
+    try:
+        r = requests.post(NTFY, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"}, timeout=20)
+        r.raise_for_status()
+        ok = True
+    except Exception as e:
+        print(f"ntfy an {k} fehlgeschlagen: {e}")
+    return ok
 
 
 def main():
@@ -95,6 +104,17 @@ def main():
 
     now = dt.datetime.now(TZ)
     heute = now.date().isoformat()
+    state = json.loads(STATE.read_text()) if STATE.exists() else {"gesendet": {}}
+    wp = WebPush(NTFY, PREFIX)
+    wp.sync(state)
+    try:
+        run(now, heute, state, wp, dry)
+    finally:
+        wp.save()
+        STATE.write_text(json.dumps(state, indent=1))
+
+
+def run(now, heute, state, wp, dry):
     html = requests.get(PAGE_URL, headers=UA, timeout=30).text
     links = find_pdfs(html)
     # pro Datum nur die neueste Fassung (z. B. ...-23b.pdf schlägt ...-23.pdf)
@@ -103,7 +123,6 @@ def main():
         if l["datum"] >= heute and (l["datum"] not in neu or l["suffix"] > neu[l["datum"]]["suffix"]):
             neu[l["datum"]] = l
 
-    state = json.loads(STATE.read_text()) if STATE.exists() else {"gesendet": {}}
     PDFDIR.mkdir(parents=True, exist_ok=True)
     url = site_url()
     plaene = []
@@ -133,12 +152,8 @@ def main():
                 continue
             if dry:
                 print(f"[dry-run] Push an {k}: {aktion}")
-            else:
-                try:
-                    notify(k, plan, items, url, key in state["gesendet"])
-                except Exception as e:  # ein fehlgeschlagener Push soll den Rest nicht stoppen
-                    print(f"Push an {k} fehlgeschlagen: {e}")
-                    continue
+            elif not notify(k, plan, items, url, key in state["gesendet"], wp):
+                continue
             state["gesendet"][key] = h
         plaene.append(plan)
 
@@ -150,13 +165,13 @@ def main():
     state["gesendet"] = {k: v for k, v in state["gesendet"].items() if k[:10] >= grenze}
 
     data = {"schule": CFG.get("school_name", ""), "aktualisiert": now.isoformat(timespec="minutes"),
-            "ntfy_server": NTFY, "topic_prefix": PREFIX, "quelle": PAGE_URL, "plaene": plaene}
+            "ntfy_server": NTFY, "topic_prefix": PREFIX, "vapid_public": CFG.get("vapid_public", ""),
+            "quelle": PAGE_URL, "plaene": plaene}
     alt_pfad = DOCS / "data.json"
     alt = json.loads(alt_pfad.read_text(encoding="utf-8")) if alt_pfad.exists() else {}
-    unveraendert = all(alt.get(f) == data[f] for f in ("plaene", "topic_prefix", "ntfy_server", "quelle"))
+    unveraendert = all(alt.get(f) == data[f] for f in ("plaene", "topic_prefix", "ntfy_server", "vapid_public", "quelle"))
     if not unveraendert:  # nur bei echten Änderungen schreiben -> keine leeren Commits alle 15 Minuten
         alt_pfad.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-    STATE.write_text(json.dumps(state, indent=1))
     print(f"{len(plaene)} Plan/Pläne verarbeitet: {', '.join(neu) or '—'}")
 
 

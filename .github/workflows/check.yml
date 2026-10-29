@@ -6,6 +6,8 @@ on:
     - cron: "*/5 4-19 * * 1-5"
     # Sonntagnachmittag/-abend für den Montagsplan
     - cron: "*/15 12-20 * * 0"
+    # rund um die Uhr alle 2 Stunden: neue Push-Anmeldungen abholen
+    - cron: "17 */2 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -32,12 +34,14 @@ jobs:
 
       - name: Plan abrufen, auswerten, Push senden
         run: python scraper/check.py
+        env:
+          WEBPUSH_KEY: ${{ secrets.WEBPUSH_KEY }}
 
       - name: Änderungen speichern
         run: |
           git config user.name "vertretungsplan-bot"
           git config user.email "vertretungsplan-bot@users.noreply.github.com"
-          git add -A docs state.json
+          git add -A
           if git diff --cached --quiet; then
             echo "Keine Änderungen."
           else

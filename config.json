@@ -3,5 +3,6 @@
   "school_name": "62. Oberschule \"Friedrich Schiller\" Dresden",
   "ntfy_server": "https://ntfy.sh",
   "topic_prefix": "os62-b7eb68",
-  "site_url": ""
+  "site_url": "",
+  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM"
 }

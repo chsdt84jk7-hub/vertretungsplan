@@ -26,11 +26,17 @@ Fertig. Den Link zur App an die Kolleginnen und Kollegen schicken.
 
 ## Für die Lehrkräfte
 
-1. App-Link öffnen, Kürzel eingeben.
-2. Auf dem Handy „Zum Home-Bildschirm“ wählen, dann sieht es aus wie eine normale App.
-3. Für Push-Nachrichten die kostenlose App **ntfy** installieren ([iPhone](https://apps.apple.com/app/ntfy/id1625396347), [Android](https://play.google.com/store/apps/details?id=io.heckel.ntfy)) und in der Web-App auf **„In ntfy öffnen“** tippen. Alternativ in ntfy auf „+“ tippen und das angezeigte Thema eintragen.
+1. App-Link öffnen, Kürzel eingeben, **Speichern**. Das Kürzel bleibt auf dem Gerät gespeichert.
+2. iPhone: unten auf **Teilen → „Zum Home-Bildschirm“**, dann die App vom Home-Bildschirm öffnen (nötig für Push auf dem iPhone). Android: Menü → „Zum Startbildschirm hinzufügen“ bzw. „App installieren“.
+3. In der App auf **„Push-Benachrichtigungen aktivieren“** tippen und erlauben. Fertig.
 
-Tippt man auf eine Push-Nachricht, öffnet sich die Web-App direkt mit dem eigenen Kürzel und dem richtigen Tag.
+Tippt man auf eine Push-Nachricht, öffnet sich die App direkt beim richtigen Tag. Wer lieber eine eigene Push-App nutzt, findet in der App unter „Alternative: über die ntfy-App“ den Weg über ntfy.
+
+## Push direkt in der App (Web Push) – einmalige Einrichtung
+
+Die App meldet ihr Push-Abo über das ntfy-Thema `<topic_prefix>-anmeldung` an. Der Workflow holt die Anmeldungen ab und speichert sie verschlüsselt in `subs.enc`. Dafür braucht das Repository ein Secret:
+
+**Settings → Secrets and variables → Actions → New repository secret**, Name `WEBPUSH_KEY`, Wert: der private Schlüssel (PEM, beginnt mit `-----BEGIN PRIVATE KEY-----`). Der passende öffentliche Schlüssel steht als `vapid_public` in `config.json`. Neues Schlüsselpaar = alle Geräte müssen Push neu aktivieren.
 
 ## Anpassen
 

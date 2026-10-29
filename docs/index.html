@@ -61,6 +61,16 @@ code{background:var(--info-bg);padding:2px 6px;border-radius:6px;font-size:.9em;
 ol.steps{padding-left:20px;margin:8px 0}
 ol.steps li{margin:6px 0}
 .hidden{display:none!important}
+.kbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.kbar .who{font-size:.85rem;color:var(--muted)}
+.kbar .who b{display:block;font-size:1.5rem;color:var(--ink);letter-spacing:.04em}
+.linkbtn{background:none;border:0;color:var(--brand);padding:6px 4px;font-weight:600}
+.pushstate{display:flex;align-items:center;gap:10px;font-weight:700}
+.pushstate.on{color:var(--ok)}
+.bigbtn{width:100%;padding:14px 16px;font-size:1.05rem}
+details{margin-top:12px}
+summary{cursor:pointer;color:var(--muted);font-size:.85rem}
+.hint{background:var(--info-bg);border-radius:12px;padding:12px;font-size:.92rem}
 </style>
 </head>
 <body>
@@ -70,12 +80,19 @@ ol.steps li{margin:6px 0}
     <div class="upd" id="upd"></div>
   </header>
 
-  <section class="card">
-    <label for="k">Dein Lehrerkürzel</label>
-    <div class="krow">
-      <input id="k" list="klist" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="z. B. Kun" maxlength="6">
-      <datalist id="klist"></datalist>
-      <button id="go">Anzeigen</button>
+  <!-- Kürzel: einmal eingeben, wird gespeichert -->
+  <section class="card" id="kcard">
+    <div id="kform">
+      <label for="k">Dein Lehrerkürzel (wird auf diesem Gerät gespeichert)</label>
+      <div class="krow">
+        <input id="k" list="klist" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="z. B. Kun" maxlength="6">
+        <datalist id="klist"></datalist>
+        <button id="go">Speichern</button>
+      </div>
+    </div>
+    <div id="kshow" class="kbar hidden">
+      <div class="who">Dein Kürzel<b id="kname"></b></div>
+      <button class="linkbtn" id="kedit">Ändern</button>
     </div>
   </section>
 
@@ -85,15 +102,33 @@ ol.steps li{margin:6px 0}
     <div class="status none">Lade Vertretungsplan …</div>
   </section>
 
+  <!-- Push -->
   <section class="card hidden" id="pushcard">
     <h2 style="margin-top:0">🔔 Push-Benachrichtigungen</h2>
-    <p class="small" style="margin-top:0">Du bekommst eine Nachricht, sobald der Plan etwas für <b id="pk"></b> enthält, das du tun musst (Vertretung, Aufsicht, Betreuung, Aufgaben). Läuft über die kostenlose App <b>ntfy</b>, ohne Anmeldung.</p>
-    <ol class="steps">
-      <li>App installieren: <a id="store" target="_blank" rel="noopener">ntfy</a></li>
-      <li>Thema abonnieren: <a class="btn" id="sub" style="padding:6px 12px">In ntfy öffnen</a><br>
-        <span class="small">oder in der App auf „+“ tippen und eintragen: <code id="topic"></code></span></li>
-    </ol>
-    <p class="small">Am Computer geht es auch im Browser: <a id="web" target="_blank" rel="noopener">Thema im Browser öffnen</a> und dort Benachrichtigungen erlauben.</p>
+    <div id="push-off">
+      <p class="small" style="margin-top:0">Du bekommst eine Nachricht aufs Handy, sobald der Plan etwas für <b class="pk"></b> enthält, das du tun musst – Vertretung, Aufsicht, Betreuung oder Aufgaben.</p>
+      <button class="bigbtn" id="push-enable">Push-Benachrichtigungen aktivieren</button>
+    </div>
+    <div id="push-on" class="hidden">
+      <div class="pushstate on">✓ Push ist an für <span class="pk"></span></div>
+      <p class="small">Du bekommst eine Nachricht, sobald es für dich etwas zu tun gibt. <button class="linkbtn" id="push-disable">Ausschalten</button></p>
+    </div>
+    <div id="push-ios" class="hint hidden">
+      Auf dem iPhone funktionieren Push-Nachrichten nur, wenn die App auf dem Home-Bildschirm liegt:
+      <ol class="steps"><li>Unten auf <b>Teilen</b> tippen (Quadrat mit Pfeil)</li><li><b>„Zum Home-Bildschirm“</b> wählen</li><li>Die App vom Home-Bildschirm öffnen und hier auf „Aktivieren“ tippen</li></ol>
+    </div>
+    <div id="push-blocked" class="hint hidden">Push-Nachrichten sind für diese Seite blockiert. Erlaube sie in den Einstellungen deines Browsers bzw. unter Einstellungen → Mitteilungen → Vertretung.</div>
+    <div id="push-unsupported" class="hint hidden">Dieser Browser kann keine Push-Nachrichten empfangen. Nutze die ntfy-App unten.</div>
+    <p class="small hidden" id="push-msg"></p>
+
+    <details id="ntfybox">
+      <summary>Alternative: über die ntfy-App</summary>
+      <ol class="steps">
+        <li>App installieren: <a id="store" target="_blank" rel="noopener">ntfy</a></li>
+        <li>Thema abonnieren: <a class="btn" id="sub" style="padding:6px 12px">In ntfy öffnen</a><br>
+          <span class="small">oder in der App auf „+“ tippen und eintragen: <code id="topic"></code></span></li>
+      </ol>
+    </details>
   </section>
 
   <p class="small" style="text-align:center">Daten von der Schulwebsite, alle 5 Min. geprüft. Im Zweifel gilt der Aushang. · <a id="src" target="_blank" rel="noopener">Originalseite</a></p>
@@ -102,16 +137,48 @@ ol.steps li{margin:6px 0}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
 const $ = s => document.querySelector(s);
-const store = { get(k){ try{return localStorage.getItem(k)}catch(e){return null} }, set(k,v){ try{localStorage.setItem(k,v)}catch(e){} } };
+const store = {
+  get(k){ try{return localStorage.getItem(k)}catch(e){return null} },
+  set(k,v){ try{ v === null ? localStorage.removeItem(k) : localStorage.setItem(k,v) }catch(e){} }
+};
 const params = new URLSearchParams(location.search);
-let DATA = null, current = params.get('d'), kz = params.get('k') || store.get('kuerzel') || '';
-$('#k').value = kz;
+let DATA = null, current = params.get('d');
+let kz = params.get('k') || store.get('kuerzel') || '';
+if(kz) store.set('kuerzel', kz);
 
 const slug = k => k.toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]/g,'');
-const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const findKey = (plan, k) => Object.keys(plan.lehrer||{}).find(x => x.toLowerCase() === k.toLowerCase());
 const today = () => new Date().toLocaleDateString('sv-SE', {timeZone:'Europe/Berlin'});
+const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+const pushSupported = 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
 
+/* ---------- Kürzel ---------- */
+function showK(){
+  const has = !!kz;
+  $('#kform').classList.toggle('hidden', has);
+  $('#kshow').classList.toggle('hidden', !has);
+  $('#kname').textContent = kz;
+  if(!has){ $('#k').value = ''; setTimeout(() => $('#k').focus(), 50); }
+}
+async function saveK(){
+  const neu = $('#k').value.trim();
+  if(!neu) return;
+  kz = neu; store.set('kuerzel', kz);
+  const u = new URL(location); u.searchParams.delete('k'); u.searchParams.delete('d'); history.replaceState(null, '', u);
+  showK();
+  if(DATA) render();
+  // gleich nach dem Speichern Push anbieten (Klick zählt als Erlaubnis zum Fragen)
+  if(pushSupported && Notification.permission === 'default' && !(isIOS && !standalone)) enablePush();
+  else if(await currentSub()) announce(await currentSub());
+}
+$('#go').onclick = saveK;
+$('#k').addEventListener('keydown', e => { if(e.key === 'Enter'){ saveK(); e.target.blur(); } });
+$('#kedit').onclick = () => { kz = ''; showK(); };
+showK();
+
+/* ---------- Plan laden & anzeigen ---------- */
 async function load(){
   let neu;
   try{
@@ -132,11 +199,11 @@ async function load(){
   DATA.sichtbar = plaene.length ? plaene : DATA.plaene.slice(-1);
   if(!DATA.sichtbar.find(p => p.datum === current)) current = DATA.sichtbar[0] && DATA.sichtbar[0].datum;
   render();
+  refreshPush();
 }
 
 function render(){
   const k = kz.trim();
-  // Tabs
   $('#tabs').innerHTML = DATA.sichtbar.map(p => {
     const key = k && findKey(p, k);
     const act = key && p.lehrer[key].some(i => i.handeln);
@@ -146,7 +213,7 @@ function render(){
   document.querySelectorAll('.tab').forEach(b => b.onclick = () => { current = b.dataset.d; render(); });
 
   const p = DATA.sichtbar.find(x => x.datum === current);
-  if(!p){ $('#plan').innerHTML = '<div class="status none">Aktuell ist kein Vertretungsplan veröffentlicht.</div>'; renderPush(k); return; }
+  if(!p){ $('#plan').innerHTML = '<div class="status none">Aktuell ist kein Vertretungsplan veröffentlicht.</div>'; renderPushCard(); return; }
 
   let html = '';
   const key = k && findKey(p, k);
@@ -163,22 +230,7 @@ function render(){
   html += `<h2>Ganzer Plan</h2><div class="row"><button class="btn ghost" id="showpdf">PDF anzeigen</button><a class="btn ghost" href="${p.pdf}" target="_blank" rel="noopener">PDF öffnen</a></div><div id="pdf"></div>`;
   $('#plan').innerHTML = html;
   $('#showpdf').onclick = () => showPdf(p.pdf);
-  renderPush(k);
-}
-
-function renderPush(k){
-  if(!k || !DATA.topic_prefix){ $('#pushcard').classList.add('hidden'); return; }
-  const topic = DATA.topic_prefix + '-' + slug(k);
-  const host = DATA.ntfy_server.replace(/^https?:\/\//,'');
-  $('#pk').textContent = k;
-  $('#topic').textContent = topic;
-  $('#sub').href = `ntfy://${host}/${topic}`;
-  $('#web').href = `${DATA.ntfy_server}/${topic}`;
-  const ios = /iPhone|iPad|iPod/.test(navigator.userAgent), android = /Android/.test(navigator.userAgent);
-  $('#store').href = ios ? 'https://apps.apple.com/app/ntfy/id1625396347'
-    : android ? 'https://play.google.com/store/apps/details?id=io.heckel.ntfy' : 'https://ntfy.sh/docs/subscribe/phone/';
-  $('#store').textContent = ios ? 'ntfy im App Store' : android ? 'ntfy im Play Store' : 'ntfy (iPhone & Android)';
-  $('#pushcard').classList.remove('hidden');
+  renderPushCard();
 }
 
 async function showPdf(url){
@@ -201,21 +253,87 @@ async function showPdf(url){
   }
 }
 
-function setK(){
-  kz = $('#k').value.trim();
-  store.set('kuerzel', kz);
-  const u = new URL(location); if(kz) u.searchParams.set('k', kz); else u.searchParams.delete('k'); u.searchParams.delete('d');
-  history.replaceState(null, '', u);
-  if(DATA) render();
+/* ---------- Push (direkt in der App) ---------- */
+const swReady = 'serviceWorker' in navigator ? navigator.serviceWorker.register('sw.js').then(() => navigator.serviceWorker.ready) : Promise.reject();
+swReady.catch(() => {});
+
+function b64ToBytes(b64){
+  const pad = '='.repeat((4 - b64.length % 4) % 4);
+  const raw = atob((b64 + pad).replace(/-/g,'+').replace(/_/g,'/'));
+  return Uint8Array.from(raw, c => c.charCodeAt(0));
 }
-$('#go').onclick = setK;
-$('#k').addEventListener('keydown', e => { if(e.key === 'Enter'){ setK(); e.target.blur(); } });
-$('#k').addEventListener('change', setK);
+async function currentSub(){
+  if(!pushSupported) return null;
+  try{ const reg = await swReady; return await reg.pushManager.getSubscription(); }catch(e){ return null; }
+}
+async function announce(sub, aktion){
+  if(!DATA || !sub) return;
+  const body = JSON.stringify({k: aktion === 'abmelden' ? '' : kz, aktion: aktion || 'anmelden', sub: sub.toJSON(), ts: Date.now()});
+  await fetch(`${DATA.ntfy_server}/${DATA.topic_prefix}-anmeldung`, {method:'POST', body});
+  if(aktion !== 'abmelden'){ store.set('push_k', kz); store.set('push_ann', String(Date.now())); }
+}
+function msg(t){ const m = $('#push-msg'); m.textContent = t || ''; m.classList.toggle('hidden', !t); }
+
+async function enablePush(){
+  msg('');
+  try{
+    const perm = await Notification.requestPermission();
+    if(perm !== 'granted'){ refreshPush(); return; }
+    const reg = await swReady;
+    let sub = await reg.pushManager.getSubscription();
+    if(!sub) sub = await reg.pushManager.subscribe({userVisibleOnly: true, applicationServerKey: b64ToBytes(DATA.vapid_public)});
+    await announce(sub);
+    reg.showNotification('Push ist an ✓', {body: `Du bekommst ab jetzt Nachrichten für ${kz}.`, icon: 'icon-192.png', tag: 'willkommen'});
+  }catch(e){
+    msg('Aktivieren hat nicht geklappt. Bitte später noch einmal versuchen.');
+  }
+  refreshPush();
+}
+async function disablePush(){
+  const sub = await currentSub();
+  if(sub){ try{ await announce(sub, 'abmelden'); }catch(e){} await sub.unsubscribe(); }
+  store.set('push_k', null);
+  refreshPush();
+}
+$('#push-enable').onclick = enablePush;
+$('#push-disable').onclick = disablePush;
+
+let SUB = null;
+async function refreshPush(){
+  SUB = await currentSub();
+  // Abo regelmäßig erneut melden (z. B. nach Kürzel-Wechsel oder alle 3 Tage) – so geht nichts verloren
+  if(SUB && DATA && (store.get('push_k') !== kz || Date.now() - Number(store.get('push_ann') || 0) > 3*864e5)){
+    announce(SUB).catch(() => {});
+  }
+  renderPushCard();
+}
+
+function renderPushCard(){
+  if(!kz || !DATA || !DATA.topic_prefix){ $('#pushcard').classList.add('hidden'); return; }
+  $('#pushcard').classList.remove('hidden');
+  document.querySelectorAll('.pk').forEach(e => e.textContent = kz);
+  const show = id => ['push-off','push-on','push-ios','push-blocked','push-unsupported'].forEach(x => $('#'+x).classList.toggle('hidden', x !== id));
+  if(!DATA.vapid_public) show('push-unsupported');
+  else if(isIOS && !standalone && !pushSupported) show('push-ios');
+  else if(!pushSupported) show('push-unsupported');
+  else if(Notification.permission === 'denied') show('push-blocked');
+  else if(SUB && Notification.permission === 'granted') show('push-on');
+  else show('push-off');
+
+  // ntfy-Alternative
+  const topic = DATA.topic_prefix + '-' + slug(kz);
+  const host = DATA.ntfy_server.replace(/^https?:\/\//,'');
+  $('#topic').textContent = topic;
+  $('#sub').href = `ntfy://${host}/${topic}`;
+  const android = /Android/.test(navigator.userAgent);
+  $('#store').href = isIOS ? 'https://apps.apple.com/app/ntfy/id1625396347'
+    : android ? 'https://play.google.com/store/apps/details?id=io.heckel.ntfy' : 'https://ntfy.sh/docs/subscribe/phone/';
+  $('#store').textContent = isIOS ? 'ntfy im App Store' : android ? 'ntfy im Play Store' : 'ntfy (iPhone & Android)';
+}
 
 load();
 setInterval(load, 5 * 60 * 1000);
 document.addEventListener('visibilitychange', () => { if(!document.hidden) load(); });
-if('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 </script>
 </body>
 </html>
