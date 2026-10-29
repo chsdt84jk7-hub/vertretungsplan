@@ -1,9 +1,9 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-10-29T19:27+01:00",
- "ntfy_server": "http://127.0.0.1:8099",
+ "aktualisiert": "2026-10-29T19:38+01:00",
+ "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
- "quelle": "http://127.0.0.1:8098/vp.html",
+ "quelle": "https://cms.sachsen.schule/os62dd/organisatorisches/vertretungsplan.html",
  "plaene": [
   {
    "titel": "Donnerstag, 29. Oktober 2026",
@@ -209,14 +209,14 @@
     {
      "klasse": "7b",
      "std": "4-5",
-     "text": "WTH Hin 1.105 · gesamte Klasse 7b, Prävention Essstörung - Betreuung Hr. Rei",
-     "roh": "gesamte Klasse 7b, Prävention Essstörung - Betreuung Hr. Rei 7b 4-5 WTH Hin 1.105"
+     "text": "WTH Hin 1.105 · gesamte Klasse 7b, Prävention Essstörung -",
+     "roh": "gesamte Klasse 7b, Prävention Essstörung - 7b 4-5 WTH Hin 1.105"
     },
     {
      "klasse": "7b",
      "std": "6",
-     "text": "ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste",
-     "roh": "7b 6 ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste"
+     "text": "ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste · Betreuung Hr. Rei",
+     "roh": "Betreuung Hr. Rei 7b 6 ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste"
     },
     {
      "klasse": "7b",
@@ -233,20 +233,20 @@
     {
      "klasse": "7c",
      "std": "2-3",
-     "text": "SPO (Nad) 1.105 · selbst. (v), Prävention Essstörung - Betreuung Fr. Bru",
-     "roh": "selbst. (v), Prävention Essstörung - Betreuung Fr. Bru 7c 2-3 SPO (Nad) 1.105"
+     "text": "SPO (Nad) 1.105 · selbst. (v), Prävention Essstörung - Betreuung Fr.",
+     "roh": "selbst. (v), Prävention Essstörung - Betreuung Fr. 7c 2-3 SPO (Nad) 1.105"
     },
     {
      "klasse": "7c",
      "std": "6-7",
-     "text": "WTH Hin · gesamte Klasse 7c, Unterricht Hr. Rei 1.K05, 1.002",
-     "roh": "gesamte Klasse 7c, Unterricht Hr. Rei 1.K05, 1.002 7c 6-7 WTH Hin"
+     "text": "WTH Hin gesamte Klasse 7c, Unterricht Hr. Rei · Bru 1.K05",
+     "roh": "Bru 1.K05, 7c 6-7 WTH Hin gesamte Klasse 7c, Unterricht Hr. Rei"
     },
     {
      "klasse": "8a,8b",
      "std": "8-9",
-     "text": "--- SPO:w Ste fällt aus",
-     "roh": "8a,8b 8-9 --- SPO:w Ste fällt aus"
+     "text": "--- SPO:w Ste fällt aus · 1.002",
+     "roh": "1.002 8a,8b 8-9 --- SPO:w Ste fällt aus"
     },
     {
      "klasse": "8c",
@@ -263,14 +263,14 @@
     {
      "klasse": "9b",
      "std": "4",
-     "text": "WTH Keh · für BIO Les, gesamte Klasse Unterricht Hr. Keh 1.K04, 1.104",
-     "roh": "für BIO Les, gesamte Klasse Unterricht Hr. Keh 1.K04, 1.104 9b 4 WTH Keh"
+     "text": "WTH Keh für BIO Les, gesamte Klasse Unterricht Hr. Keh · 1.K04",
+     "roh": "1.K04, 9b 4 WTH Keh für BIO Les, gesamte Klasse Unterricht Hr. Keh"
     },
     {
      "klasse": "9b",
      "std": "8",
-     "text": "--- WB Nad fällt aus",
-     "roh": "9b 8 --- WB Nad fällt aus"
+     "text": "--- WB Nad fällt aus · 1.104",
+     "roh": "1.104 9b 8 --- WB Nad fällt aus"
     },
     {
      "klasse": "10a",
@@ -299,20 +299,20 @@
     {
      "klasse": "10c",
      "std": "1",
-     "text": "ETH Ste 3.104 · verlegt von St.3; EN Kan verlegt nach St.8, verlegt von 8. Stunde nach 3. Stunde",
-     "roh": "verlegt von St.3; EN Kan verlegt nach St.8, verlegt von 8. Stunde nach 3. Stunde 10c 1 ETH Ste 3.104"
+     "text": "ETH Ste 3.104 · verlegt von St.3; EN Kan verlegt nach St.8, verlegt",
+     "roh": "verlegt von St.3; EN Kan verlegt nach St.8, verlegt 10c 1 ETH Ste 3.104"
     },
     {
      "klasse": "10c",
      "std": "3",
-     "text": "EN Kan 3.010 ETH Ste verlegt nach St.1",
-     "roh": "10c 3 EN Kan 3.010 ETH Ste verlegt nach St.1"
+     "text": "EN Kan 3.010 ETH Ste verlegt nach St.1 · von 8. Stunde nach 3. Stunde",
+     "roh": "von 8. Stunde nach 3. Stunde 10c 3 EN Kan 3.010 ETH Ste verlegt nach St.1"
     },
     {
      "klasse": "10c",
      "std": "8",
-     "text": "EN Kan · verlegt von St.1, verlegt von 8. Stunde nach 3. Stunde",
-     "roh": "verlegt von St.1, verlegt von 8. Stunde nach 3. Stunde 10c 8 EN Kan"
+     "text": "EN Kan Stunde · verlegt von St.1, verlegt von 8. Stunde nach 3.",
+     "roh": "verlegt von St.1, verlegt von 8. Stunde nach 3. 10c 8 EN Kan Stunde"
     }
    ],
    "hinweise": [
@@ -321,8 +321,8 @@
     "Nachschreiben Klassenarbeiten - 8. / 9. Stunde - Raum 1.104 - Betreuung Hr. Fra"
    ],
    "pdf": "pdf/plan-2026-10-29.pdf",
-   "quelle": "http://127.0.0.1:8098/fileadmin/Vertretungsplan_Sch%C3%BCler2026-10-29.pdf",
-   "sha": "5e8440051d24",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-10-29.pdf",
+   "sha": "c45dcafe0956",
    "lehrer": {
     "Blu": [
      {
@@ -333,12 +333,6 @@
      }
     ],
     "Bru": [
-     {
-      "art": "betreuung",
-      "handeln": true,
-      "label": "Betreuung/Unterricht",
-      "text": "7c, 2-3. Std.: SPO (Nad) 1.105 · selbst. (v), Prävention Essstörung - Betreuung Fr. Bru"
-     },
      {
       "art": "hinweis",
       "handeln": true,
@@ -380,10 +374,10 @@
       "text": "6a, 4-5. Std.: ETH Fra 1.004 für ETH Ste, Aufgaben Fr. Ste"
      },
      {
-      "art": "unterricht",
-      "handeln": true,
-      "label": "Geänderter Unterricht",
-      "text": "7b, 6. Std.: ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste"
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "7b, 6. Std.: ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste · Betreuung Hr. Rei"
      },
      {
       "art": "hinweis",
@@ -409,13 +403,13 @@
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "7b, 4-5. Std.: WTH Hin 1.105 · gesamte Klasse 7b, Prävention Essstörung - Betreuung Hr. Rei"
+      "text": "7b, 4-5. Std.: WTH Hin 1.105 · gesamte Klasse 7b, Prävention Essstörung -"
      },
      {
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "7c, 6-7. Std.: WTH Hin · gesamte Klasse 7c, Unterricht Hr. Rei 1.K05, 1.002"
+      "text": "7c, 6-7. Std.: WTH Hin gesamte Klasse 7c, Unterricht Hr. Rei · Bru 1.K05"
      }
     ],
     "Kan": [
@@ -434,19 +428,19 @@
       "art": "unterricht",
       "handeln": true,
       "label": "Geänderter Unterricht",
-      "text": "10c, 1. Std.: ETH Ste 3.104 · verlegt von St.3; EN Kan verlegt nach St.8, verlegt von 8. Stunde nach 3. Stunde"
+      "text": "10c, 1. Std.: ETH Ste 3.104 · verlegt von St.3; EN Kan verlegt nach St.8, verlegt"
      },
      {
       "art": "unterricht",
       "handeln": true,
       "label": "Geänderter Unterricht",
-      "text": "10c, 3. Std.: EN Kan 3.010 ETH Ste verlegt nach St.1"
+      "text": "10c, 3. Std.: EN Kan 3.010 ETH Ste verlegt nach St.1 · von 8. Stunde nach 3. Stunde"
      },
      {
       "art": "unterricht",
       "handeln": true,
       "label": "Geänderter Unterricht",
-      "text": "10c, 8. Std.: EN Kan · verlegt von St.1, verlegt von 8. Stunde nach 3. Stunde"
+      "text": "10c, 8. Std.: EN Kan Stunde · verlegt von St.1, verlegt von 8. Stunde nach 3."
      }
     ],
     "Keh": [
@@ -464,7 +458,7 @@
       "art": "betreuung",
       "handeln": true,
       "label": "Betreuung/Unterricht",
-      "text": "9b, 4. Std.: WTH Keh · für BIO Les, gesamte Klasse Unterricht Hr. Keh 1.K04, 1.104"
+      "text": "9b, 4. Std.: WTH Keh für BIO Les, gesamte Klasse Unterricht Hr. Keh · 1.K04"
      },
      {
       "art": "unterricht",
@@ -524,7 +518,7 @@
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "9b, 4. Std.: WTH Keh · für BIO Les, gesamte Klasse Unterricht Hr. Keh 1.K04, 1.104"
+      "text": "9b, 4. Std.: WTH Keh für BIO Les, gesamte Klasse Unterricht Hr. Keh · 1.K04"
      },
      {
       "art": "faellt_aus",
@@ -615,7 +609,7 @@
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "7c, 2-3. Std.: SPO (Nad) 1.105 · selbst. (v), Prävention Essstörung - Betreuung Fr. Bru"
+      "text": "7c, 2-3. Std.: SPO (Nad) 1.105 · selbst. (v), Prävention Essstörung - Betreuung Fr."
      },
      {
       "art": "faellt_aus",
@@ -627,7 +621,7 @@
       "art": "faellt_aus",
       "handeln": false,
       "label": "Deine Stunde entfällt",
-      "text": "9b, 8. Std.: --- WB Nad fällt aus"
+      "text": "9b, 8. Std.: --- WB Nad fällt aus · 1.104"
      }
     ],
     "Rei": [
@@ -635,13 +629,13 @@
       "art": "betreuung",
       "handeln": true,
       "label": "Betreuung/Unterricht",
-      "text": "7b, 4-5. Std.: WTH Hin 1.105 · gesamte Klasse 7b, Prävention Essstörung - Betreuung Hr. Rei"
+      "text": "7b, 6. Std.: ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste · Betreuung Hr. Rei"
      },
      {
       "art": "betreuung",
       "handeln": true,
       "label": "Betreuung/Unterricht",
-      "text": "7c, 6-7. Std.: WTH Hin · gesamte Klasse 7c, Unterricht Hr. Rei 1.K05, 1.002"
+      "text": "7c, 6-7. Std.: WTH Hin gesamte Klasse 7c, Unterricht Hr. Rei · Bru 1.K05"
      }
     ],
     "Run": [
@@ -725,25 +719,25 @@
       "art": "aufgaben",
       "handeln": true,
       "label": "Aufgaben bereitstellen",
-      "text": "7b, 6. Std.: ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste"
+      "text": "7b, 6. Std.: ETH Fra 3.010 für ETH Ste, Aufgaben Fr. Ste · Betreuung Hr. Rei"
      },
      {
       "art": "faellt_aus",
       "handeln": false,
       "label": "Deine Stunde entfällt",
-      "text": "8a,8b, 8-9. Std.: --- SPO:w Ste fällt aus"
+      "text": "8a,8b, 8-9. Std.: --- SPO:w Ste fällt aus · 1.002"
      },
      {
       "art": "unterricht",
       "handeln": true,
       "label": "Geänderter Unterricht",
-      "text": "10c, 1. Std.: ETH Ste 3.104 · verlegt von St.3; EN Kan verlegt nach St.8, verlegt von 8. Stunde nach 3. Stunde"
+      "text": "10c, 1. Std.: ETH Ste 3.104 · verlegt von St.3; EN Kan verlegt nach St.8, verlegt"
      },
      {
       "art": "unterricht",
       "handeln": true,
       "label": "Geänderter Unterricht",
-      "text": "10c, 3. Std.: EN Kan 3.010 ETH Ste verlegt nach St.1"
+      "text": "10c, 3. Std.: EN Kan 3.010 ETH Ste verlegt nach St.1 · von 8. Stunde nach 3. Stunde"
      }
     ],
     "Sto": [
@@ -886,26 +880,26 @@
     {
      "klasse": "5c",
      "std": "4-5",
-     "text": "TC Hin · gesamte Klasse 5c, Unterricht Hr. Rei 1.K10, 1.105",
-     "roh": "gesamte Klasse 5c, Unterricht Hr. Rei 1.K10, 1.105 5c 4-5 TC Hin"
+     "text": "TC Hin gesamte Klasse 5c, Unterricht Hr. Rei · 1.K10",
+     "roh": "1.K10, 5c 4-5 TC Hin gesamte Klasse 5c, Unterricht Hr. Rei"
     },
     {
      "klasse": "6b",
      "std": "2-3",
-     "text": "MU (Hei) 1.204 · selbst. (v), Musikalische Reise durch Europa / Tschechien \"Die Moldau\" - Betreuung Fr. Kun",
-     "roh": "selbst. (v), Musikalische Reise durch Europa / Tschechien \"Die Moldau\" - Betreuung Fr. Kun 6b 2-3 MU (Hei) 1.204"
+     "text": "MU (Hei) 1.204 · 1.105 selbst. (v), Musikalische Reise durch Europa /",
+     "roh": "1.105 selbst. (v), Musikalische Reise durch Europa / 6b 2-3 MU (Hei) 1.204"
     },
     {
      "klasse": "7c",
      "std": "4-5",
-     "text": "MU (Hei) 1.204 · selbst. (v), Musikalische Zeitreise \"Mittelalter\" - Aufgaben auf LernSax - Betreuung Fr. Kun",
-     "roh": "selbst. (v), Musikalische Zeitreise \"Mittelalter\" - Aufgaben auf LernSax - Betreuung Fr. Kun 7c 4-5 MU (Hei) 1.204"
+     "text": "MU (Hei) 1.204 · Tschechien \"Die Moldau\" - Betreuung Fr. Kun selbst. (v), Musikalische Zeitreise \"Mittelalter\" -",
+     "roh": "Tschechien \"Die Moldau\" - Betreuung Fr. Kun selbst. (v), Musikalische Zeitreise \"Mittelalter\" - 7c 4-5 MU (Hei) 1.204"
     },
     {
      "klasse": "8a",
      "std": "4",
-     "text": "GE Fra 1.104",
-     "roh": "8a 4 GE Fra 1.104"
+     "text": "GE Fra 1.104 · Aufgaben auf LernSax - Betreuung Fr. Kun",
+     "roh": "Aufgaben auf LernSax - Betreuung Fr. Kun 8a 4 GE Fra 1.104"
     },
     {
      "klasse": "8b,8c",
@@ -934,20 +928,20 @@
     {
      "klasse": "9c",
      "std": "6",
-     "text": "INF Die · für MU Hei, Zusammenlegung der Informatikgruppen 3.011, 3.012",
-     "roh": "für MU Hei, Zusammenlegung der Informatikgruppen 3.011, 3.012 9c 6 INF Die"
+     "text": "INF Die · 3.011, für MU Hei, Zusammenlegung der",
+     "roh": "3.011, für MU Hei, Zusammenlegung der 9c 6 INF Die"
     },
     {
      "klasse": "9c",
      "std": "7",
-     "text": "INF Die · gesamte Klasse 9c, Zusammenlegung der Informatikgruppen 3.012, 3.011",
-     "roh": "gesamte Klasse 9c, Zusammenlegung der Informatikgruppen 3.012, 3.011 9c 7 INF Die"
+     "text": "INF Die · 3.012 Informatikgruppen 3.012, gesamte Klasse 9c, Zusammenlegung der",
+     "roh": "3.012 Informatikgruppen 3.012, gesamte Klasse 9c, Zusammenlegung der 9c 7 INF Die"
     },
     {
      "klasse": "10a,10c",
      "std": "8-9",
-     "text": "--- SPO:w Nad fällt aus",
-     "roh": "10a,10c 8-9 --- SPO:w Nad fällt aus"
+     "text": "--- SPO:w Nad fällt aus · 3.011 Informatikgruppen",
+     "roh": "3.011 Informatikgruppen 10a,10c 8-9 --- SPO:w Nad fällt aus"
     },
     {
      "klasse": "10c",
@@ -961,8 +955,8 @@
     "Exkursion Klasse 8a ab 11.30 Uhr / Betr. Hr. Fra / Fr. Fis"
    ],
    "pdf": "pdf/plan-2026-10-30.pdf",
-   "quelle": "http://127.0.0.1:8098/fileadmin/Vertretungsplan_Sch%C3%BCler2026-10-30.pdf",
-   "sha": "b8926550b904",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-10-30.pdf",
+   "sha": "0af3e7fa3750",
    "lehrer": {
     "Amm": [
      {
@@ -994,13 +988,13 @@
       "art": "unterricht",
       "handeln": true,
       "label": "Geänderter Unterricht",
-      "text": "9c, 6. Std.: INF Die · für MU Hei, Zusammenlegung der Informatikgruppen 3.011, 3.012"
+      "text": "9c, 6. Std.: INF Die · 3.011, für MU Hei, Zusammenlegung der"
      },
      {
       "art": "unterricht",
       "handeln": true,
       "label": "Geänderter Unterricht",
-      "text": "9c, 7. Std.: INF Die · gesamte Klasse 9c, Zusammenlegung der Informatikgruppen 3.012, 3.011"
+      "text": "9c, 7. Std.: INF Die · 3.012 Informatikgruppen 3.012, gesamte Klasse 9c, Zusammenlegung der"
      }
     ],
     "Ebe": [
@@ -1046,10 +1040,10 @@
       "text": "Deine Aufsicht 13:15 Uhr (1.E(N)) entfällt"
      },
      {
-      "art": "unterricht",
-      "handeln": true,
-      "label": "Geänderter Unterricht",
-      "text": "8a, 4. Std.: GE Fra 1.104"
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "8a, 4. Std.: GE Fra 1.104 · Aufgaben auf LernSax - Betreuung Fr. Kun"
      },
      {
       "art": "faellt_aus",
@@ -1084,19 +1078,19 @@
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "6b, 2-3. Std.: MU (Hei) 1.204 · selbst. (v), Musikalische Reise durch Europa / Tschechien \"Die Moldau\" - Betreuung Fr. Kun"
+      "text": "6b, 2-3. Std.: MU (Hei) 1.204 · 1.105 selbst. (v), Musikalische Reise durch Europa /"
      },
      {
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "7c, 4-5. Std.: MU (Hei) 1.204 · selbst. (v), Musikalische Zeitreise \"Mittelalter\" - Aufgaben auf LernSax - Betreuung Fr. Kun"
+      "text": "7c, 4-5. Std.: MU (Hei) 1.204 · Tschechien \"Die Moldau\" - Betreuung Fr. Kun selbst. (v), Musikalische Zeitreise \"Mittelalter\" -"
      },
      {
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "9c, 6. Std.: INF Die · für MU Hei, Zusammenlegung der Informatikgruppen 3.011, 3.012"
+      "text": "9c, 6. Std.: INF Die · 3.011, für MU Hei, Zusammenlegung der"
      }
     ],
     "Hin": [
@@ -1109,7 +1103,7 @@
       "art": "vertreten",
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
-      "text": "5c, 4-5. Std.: TC Hin · gesamte Klasse 5c, Unterricht Hr. Rei 1.K10, 1.105"
+      "text": "5c, 4-5. Std.: TC Hin gesamte Klasse 5c, Unterricht Hr. Rei · 1.K10"
      },
      {
       "art": "faellt_aus",
@@ -1153,13 +1147,13 @@
       "art": "betreuung",
       "handeln": true,
       "label": "Betreuung/Unterricht",
-      "text": "6b, 2-3. Std.: MU (Hei) 1.204 · selbst. (v), Musikalische Reise durch Europa / Tschechien \"Die Moldau\" - Betreuung Fr. Kun"
+      "text": "7c, 4-5. Std.: MU (Hei) 1.204 · Tschechien \"Die Moldau\" - Betreuung Fr. Kun selbst. (v), Musikalische Zeitreise \"Mittelalter\" -"
      },
      {
       "art": "betreuung",
       "handeln": true,
       "label": "Betreuung/Unterricht",
-      "text": "7c, 4-5. Std.: MU (Hei) 1.204 · selbst. (v), Musikalische Zeitreise \"Mittelalter\" - Aufgaben auf LernSax - Betreuung Fr. Kun"
+      "text": "8a, 4. Std.: GE Fra 1.104 · Aufgaben auf LernSax - Betreuung Fr. Kun"
      }
     ],
     "Les": [
@@ -1202,7 +1196,7 @@
       "art": "faellt_aus",
       "handeln": false,
       "label": "Deine Stunde entfällt",
-      "text": "10a,10c, 8-9. Std.: --- SPO:w Nad fällt aus"
+      "text": "10a,10c, 8-9. Std.: --- SPO:w Nad fällt aus · 3.011 Informatikgruppen"
      }
     ],
     "Rei": [
@@ -1210,7 +1204,7 @@
       "art": "betreuung",
       "handeln": true,
       "label": "Betreuung/Unterricht",
-      "text": "5c, 4-5. Std.: TC Hin · gesamte Klasse 5c, Unterricht Hr. Rei 1.K10, 1.105"
+      "text": "5c, 4-5. Std.: TC Hin gesamte Klasse 5c, Unterricht Hr. Rei · 1.K10"
      }
     ]
    }
