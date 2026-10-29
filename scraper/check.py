@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Prüft den Vertretungsplan, spiegelt die PDFs in docs/pdf, schreibt docs/data.json
-und schickt per Web Push (direkt in die App) und ntfy eine Push-Nachricht an jedes Kürzel, das etwas tun muss.
+und schickt per Web Push (direkt in die App) eine Push-Nachricht an jedes Kürzel, das etwas tun muss.
 
 Lokal testen:  python scraper/check.py --dry-run     (schickt keine Push-Nachrichten)
 Einzelnes PDF: python scraper/check.py --dump plan.pdf
@@ -74,23 +74,12 @@ def notify(k, plan, items, url, update, wp):
     title = ("Aktualisiert: " if update else "") + f"Vertretungsplan {plan['titel'].rsplit(' ', 1)[0]}"
     message = "\n".join(lines)[:3800]
     click = f"{url}?k={urllib.parse.quote(k)}&d={plan['datum']}" if url else ""
-    ok = False
-    # 1) direkt in der Web-App (Web Push)
     try:
-        ok |= wp.send(k, title, message[:1500], click or "./") > 0
+        wp.send(k, title, message[:1500], click or "./")
+        return True
     except Exception as e:
         print(f"Web Push an {k} fehlgeschlagen: {e}")
-    # 2) zusätzlich über die ntfy-App
-    body = {"topic": f"{PREFIX}-{pp.topic_slug(k)}", "title": title, "message": message, "tags": ["school"], "priority": 4}
-    if click:
-        body["click"] = click
-    try:
-        r = requests.post(NTFY, data=json.dumps(body).encode(), headers={"Content-Type": "application/json"}, timeout=20)
-        r.raise_for_status()
-        ok = True
-    except Exception as e:
-        print(f"ntfy an {k} fehlgeschlagen: {e}")
-    return ok
+        return False
 
 
 def main():
@@ -113,12 +102,6 @@ def main():
         url = site_url()
         n = wp.send(test_k, "Vertretungsplan", text, f"{url}?k={urllib.parse.quote(test_k)}" if url else "./")
         print(f"Testnachricht an {test_k}: {n} Gerät(e) per Web Push erreicht.")
-        try:
-            requests.post(NTFY, data=json.dumps({"topic": f"{PREFIX}-{pp.topic_slug(test_k)}", "title": "Vertretungsplan",
-                                                  "message": text, "tags": ["school"]}).encode(),
-                          headers={"Content-Type": "application/json"}, timeout=20)
-        except Exception as e:
-            print(f"ntfy-Test fehlgeschlagen: {e}")
     try:
         run(now, heute, state, wp, dry)
     finally:

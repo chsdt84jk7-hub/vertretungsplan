@@ -118,17 +118,9 @@ summary{cursor:pointer;color:var(--muted);font-size:.85rem}
       <ol class="steps"><li>Unten auf <b>Teilen</b> tippen (Quadrat mit Pfeil)</li><li><b>„Zum Home-Bildschirm“</b> wählen</li><li>Die App vom Home-Bildschirm öffnen und hier auf „Aktivieren“ tippen</li></ol>
     </div>
     <div id="push-blocked" class="hint hidden">Push-Nachrichten sind für diese Seite blockiert. Erlaube sie in den Einstellungen deines Browsers bzw. unter Einstellungen → Mitteilungen → Vertretung.</div>
-    <div id="push-unsupported" class="hint hidden">Dieser Browser kann keine Push-Nachrichten empfangen. Nutze die ntfy-App unten.</div>
+    <div id="push-unsupported" class="hint hidden">Dieser Browser kann keine Push-Nachrichten empfangen. Auf dem iPhone: App über Teilen → „Zum Home-Bildschirm“ hinzufügen und von dort öffnen.</div>
     <p class="small hidden" id="push-msg"></p>
 
-    <details id="ntfybox">
-      <summary>Alternative: über die ntfy-App</summary>
-      <ol class="steps">
-        <li>App installieren: <a id="store" target="_blank" rel="noopener">ntfy</a></li>
-        <li>Thema abonnieren: <a class="btn" id="sub" style="padding:6px 12px">In ntfy öffnen</a><br>
-          <span class="small">oder in der App auf „+“ tippen und eintragen: <code id="topic"></code></span></li>
-      </ol>
-    </details>
   </section>
 
   <p class="small" style="text-align:center">Daten von der Schulwebsite, alle 5 Min. geprüft. Im Zweifel gilt der Aushang. · <a id="src" target="_blank" rel="noopener">Originalseite</a></p>
@@ -320,15 +312,6 @@ function renderPushCard(){
   else if(SUB && Notification.permission === 'granted') show('push-on');
   else show('push-off');
 
-  // ntfy-Alternative
-  const topic = DATA.topic_prefix + '-' + slug(kz);
-  const host = DATA.ntfy_server.replace(/^https?:\/\//,'');
-  $('#topic').textContent = topic;
-  $('#sub').href = `ntfy://${host}/${topic}`;
-  const android = /Android/.test(navigator.userAgent);
-  $('#store').href = isIOS ? 'https://apps.apple.com/app/ntfy/id1625396347'
-    : android ? 'https://play.google.com/store/apps/details?id=io.heckel.ntfy' : 'https://ntfy.sh/docs/subscribe/phone/';
-  $('#store').textContent = isIOS ? 'ntfy im App Store' : android ? 'ntfy im Play Store' : 'ntfy (iPhone & Android)';
 }
 
 load();
