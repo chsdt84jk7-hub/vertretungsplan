@@ -314,9 +314,15 @@ function renderPushCard(){
 
 }
 
+// App geöffnet: Zahl am App-Symbol löschen
+function clearBadge(){
+  try{ if(navigator.clearAppBadge) navigator.clearAppBadge(); }catch(e){}
+  if('serviceWorker' in navigator) navigator.serviceWorker.ready.then(r => r.active && r.active.postMessage({t:'clearBadge'})).catch(() => {});
+}
 load();
+clearBadge();
 setInterval(load, 5 * 60 * 1000);
-document.addEventListener('visibilitychange', () => { if(!document.hidden) load(); });
+document.addEventListener('visibilitychange', () => { if(!document.hidden){ load(); clearBadge(); } });
 </script>
 </body>
 </html>
