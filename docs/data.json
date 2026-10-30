@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-10-30T02:12+01:00",
+ "aktualisiert": "2026-10-30T16:00+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -439,6 +439,495 @@
       "handeln": true,
       "label": "Betreuung/Unterricht",
       "text": "5c, 4-5. Std.: TC Hin 1.K10, 1.105 gesamte Klasse 5c, Unterricht Hr. Rei"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Montag, 2. November 2026",
+   "datum": "2026-11-02",
+   "woche": "B-Woche",
+   "erstellt": "30.10.2026",
+   "abwesend": [
+    {
+     "k": "Hin",
+     "std": ""
+    },
+    {
+     "k": "Les",
+     "std": ""
+    },
+    {
+     "k": "Nad",
+     "std": ""
+    },
+    {
+     "k": "Rei",
+     "std": ""
+    }
+   ],
+   "geaendert": [
+    "Die",
+    "Fis",
+    "Hei",
+    "Hof",
+    "Jag",
+    "Keh",
+    "Küh",
+    "Kun",
+    "Ric",
+    "Suk"
+   ],
+   "aufsichten": [
+    {
+     "zeit": "07:15",
+     "ort": "E+EG(A)",
+     "wer": "Küh",
+     "fuer": "Nad"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "1./2.E(A)",
+     "wer": "entfällt",
+     "fuer": "Hof"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "E+EG(A)",
+     "wer": "Hof",
+     "fuer": "Rei"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "1./2.E(A)",
+     "wer": "entfällt",
+     "fuer": "Ric"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "E+EG(A)",
+     "wer": "Ric",
+     "fuer": "Nad"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "Hof 2",
+     "wer": "entfällt",
+     "fuer": "Küh"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "Ke",
+     "wer": "Kun",
+     "fuer": "Rei"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "Hof 2",
+     "wer": "entfällt",
+     "fuer": "Les"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "1./2.E(A)",
+     "wer": "entfällt",
+     "fuer": "Ric"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "E+EG(A)",
+     "wer": "Ric",
+     "fuer": "Les"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "Ke",
+     "wer": "Keh",
+     "fuer": "Rei"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "1./2.E(A)",
+     "wer": "Hei",
+     "fuer": "Nad"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "E+EG(A)",
+     "wer": "Suk",
+     "fuer": "Les"
+    }
+   ],
+   "zeilen": [
+    {
+     "klasse": "6a",
+     "std": "1",
+     "text": "--- MA Jag verlegt nach St.4",
+     "roh": "6a 1 --- MA Jag verlegt nach St.4"
+    },
+    {
+     "klasse": "6a",
+     "std": "4",
+     "text": "MA Jag 1.004 verlegt von St.1; BIO Les fällt aus",
+     "roh": "6a 4 MA Jag 1.004 verlegt von St.1; BIO Les fällt aus"
+    },
+    {
+     "klasse": "6a",
+     "std": "5",
+     "text": "GEO Keh 1.004 für BIO Les",
+     "roh": "6a 5 GEO Keh 1.004 für BIO Les"
+    },
+    {
+     "klasse": "6b",
+     "std": "1",
+     "text": "--- DE Nad fällt aus",
+     "roh": "6b 1 --- DE Nad fällt aus"
+    },
+    {
+     "klasse": "7a",
+     "std": "4-5",
+     "text": "GE Ric 1.104 statt Do (05.11.) St.2-3; WTH Rei fällt aus; WTH Hin fällt aus",
+     "roh": "7a 4-5 GE Ric 1.104 statt Do (05.11.) St.2-3; WTH Rei fällt aus; WTH Hin fällt aus"
+    },
+    {
+     "klasse": "7b",
+     "std": "7",
+     "text": "--- BIO Les fällt aus",
+     "roh": "7b 7 --- BIO Les fällt aus"
+    },
+    {
+     "klasse": "7c",
+     "std": "6-7",
+     "text": "--- DE Nad fällt aus",
+     "roh": "7c 6-7 --- DE Nad fällt aus"
+    },
+    {
+     "klasse": "8b",
+     "std": "6",
+     "text": "FR Suk 1.004 verlegt von St.8",
+     "roh": "8b 6 FR Suk 1.004 verlegt von St.8"
+    },
+    {
+     "klasse": "8b",
+     "std": "8",
+     "text": "--- FR Suk verlegt nach St.6",
+     "roh": "8b 8 --- FR Suk verlegt nach St.6"
+    },
+    {
+     "klasse": "9a",
+     "std": "6-8",
+     "text": "WTH (Rei) selbst. (v), Aufgaben Hr.Rei - Erledigung zu Hause",
+     "roh": "9a 6-8 WTH (Rei) selbst. (v), Aufgaben Hr.Rei - Erledigung zu Hause"
+    },
+    {
+     "klasse": "9b",
+     "std": "4-5",
+     "text": "MA (Nad) 1.001 selbst. (a), Aufgaben Fr. Hof -Sch",
+     "roh": "9b 4-5 MA (Nad) 1.001 selbst. (a), Aufgaben Fr. Hof -Sch"
+    },
+    {
+     "klasse": "9b",
+     "std": "7",
+     "text": "GEO Ric 1.104 statt Mo (09.11.) St.6; ETH Fis verlegt nach Mo (09.11.) St.6",
+     "roh": "9b 7 GEO Ric 1.104 statt Mo (09.11.) St.6; ETH Fis verlegt nach Mo (09.11.) St.6"
+    },
+    {
+     "klasse": "9c",
+     "std": "2-3",
+     "text": "--- CH Les fällt aus",
+     "roh": "9c 2-3 --- CH Les fällt aus"
+    },
+    {
+     "klasse": "9c",
+     "std": "6",
+     "text": "INF Die 3.011, 3.012 für BIO Les",
+     "roh": "9c 6 INF Die 3.011, 3.012 für BIO Les"
+    }
+   ],
+   "hinweise": [
+    "Die Aufsichtsbereiche 1. Etage Altbau und 1. Etage Neubau werden zusammengelegt."
+   ],
+   "pdf": "pdf/plan-2026-11-02.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-02.pdf",
+   "sha": "e059393bd579",
+   "lehrer": {
+    "Die": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9c, 6. Std.: INF Die 3.011, 3.012 für BIO Les"
+     }
+    ],
+    "Fis": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 7. Std.: GEO Ric 1.104 statt Mo (09.11.) St.6; ETH Fis verlegt nach Mo (09.11.) St.6"
+     }
+    ],
+    "Hei": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht 1./2.E(A) (für Nad)"
+     }
+    ],
+    "Hin": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7a, 4-5. Std.: GE Ric 1.104 statt Do (05.11.) St.2-3; WTH Rei fällt aus; WTH Hin fällt aus"
+     }
+    ],
+    "Hof": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (1./2.E(A)) entfällt"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "09:55 Uhr Aufsicht E+EG(A) (für Rei)"
+     },
+     {
+      "art": "aufgaben",
+      "handeln": true,
+      "label": "Aufgaben bereitstellen",
+      "text": "9b, 4-5. Std.: MA (Nad) 1.001 selbst. (a), Aufgaben Fr. Hof -Sch"
+     }
+    ],
+    "Jag": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6a, 1. Std.: --- MA Jag verlegt nach St.4"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6a, 4. Std.: MA Jag 1.004 verlegt von St.1; BIO Les fällt aus"
+     }
+    ],
+    "Keh": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht Ke (für Rei)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6a, 5. Std.: GEO Keh 1.004 für BIO Les"
+     }
+    ],
+    "Kun": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "11:50 Uhr Aufsicht Ke (für Rei)"
+     }
+    ],
+    "Küh": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "07:15 Uhr Aufsicht E+EG(A) (für Nad)"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (Hof 2) entfällt"
+     }
+    ],
+    "Les": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (Hof 2) entfällt"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (E+EG(A)) übernimmt Ric"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (E+EG(A)) übernimmt Suk"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6a, 4. Std.: MA Jag 1.004 verlegt von St.1; BIO Les fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6a, 5. Std.: GEO Keh 1.004 für BIO Les"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7b, 7. Std.: --- BIO Les fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "9c, 2-3. Std.: --- CH Les fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9c, 6. Std.: INF Die 3.011, 3.012 für BIO Les"
+     }
+    ],
+    "Nad": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 07:15 Uhr (E+EG(A)) übernimmt Küh"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (E+EG(A)) übernimmt Ric"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (1./2.E(A)) übernimmt Hei"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6b, 1. Std.: --- DE Nad fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7c, 6-7. Std.: --- DE Nad fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9b, 4-5. Std.: MA (Nad) 1.001 selbst. (a), Aufgaben Fr. Hof -Sch"
+     }
+    ],
+    "Rei": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (E+EG(A)) übernimmt Hof"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (Ke) übernimmt Kun"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (Ke) übernimmt Keh"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7a, 4-5. Std.: GE Ric 1.104 statt Do (05.11.) St.2-3; WTH Rei fällt aus; WTH Hin fällt aus"
+     },
+     {
+      "art": "aufgaben",
+      "handeln": true,
+      "label": "Aufgaben bereitstellen",
+      "text": "9a, 6-8. Std.: WTH (Rei) selbst. (v), Aufgaben Hr.Rei - Erledigung zu Hause"
+     }
+    ],
+    "Ric": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (1./2.E(A)) entfällt"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "11:50 Uhr Aufsicht E+EG(A) (für Nad)"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (1./2.E(A)) entfällt"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht E+EG(A) (für Les)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "7a, 4-5. Std.: GE Ric 1.104 statt Do (05.11.) St.2-3; WTH Rei fällt aus; WTH Hin fällt aus"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 7. Std.: GEO Ric 1.104 statt Mo (09.11.) St.6; ETH Fis verlegt nach Mo (09.11.) St.6"
+     }
+    ],
+    "Suk": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht E+EG(A) (für Les)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 6. Std.: FR Suk 1.004 verlegt von St.8"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 8. Std.: --- FR Suk verlegt nach St.6"
      }
     ]
    }
