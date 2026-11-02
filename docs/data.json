@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-10-31T02:10+01:00",
+ "aktualisiert": "2026-11-02T11:05+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -491,6 +491,452 @@
       "handeln": true,
       "label": "Geänderter Unterricht",
       "text": "8b, 8. Std.: --- FR Suk verlegt nach St.6"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Dienstag, 3. November 2026",
+   "datum": "2026-11-03",
+   "woche": "B-Woche",
+   "erstellt": "02.11.2026",
+   "abwesend": [
+    {
+     "k": "Hin",
+     "std": ""
+    },
+    {
+     "k": "Les",
+     "std": ""
+    },
+    {
+     "k": "Nad",
+     "std": ""
+    },
+    {
+     "k": "Rei",
+     "std": ""
+    },
+    {
+     "k": "Sei",
+     "std": ""
+    }
+   ],
+   "geaendert": [
+    "Amm",
+    "Ebe",
+    "Hof",
+    "Keh",
+    "Kun",
+    "MülB",
+    "Pie",
+    "Rei",
+    "Zim"
+   ],
+   "aufsichten": [
+    {
+     "zeit": "08:15",
+     "ort": "1.E(N)",
+     "wer": "entfällt",
+     "fuer": "Sei"
+    },
+    {
+     "zeit": "08:15",
+     "ort": "Ke",
+     "wer": "Keh",
+     "fuer": "Rei"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "1./2.E(A)",
+     "wer": "entfällt",
+     "fuer": "Nad"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "1.E(N)",
+     "wer": "Amm",
+     "fuer": "Sei"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "Bibo",
+     "wer": "entfällt",
+     "fuer": "Amm"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "Hof 2",
+     "wer": "entfällt",
+     "fuer": "Rei"
+    },
+    {
+     "zeit": "14:55",
+     "ort": "Ke",
+     "wer": "entfällt",
+     "fuer": "Rei"
+    }
+   ],
+   "zeilen": [
+    {
+     "klasse": "5a",
+     "std": "4-5",
+     "text": "TC Rei 1.K05, 1.003 gesamte Klasse 5a, Unterricht Hr. Keh",
+     "roh": "5a 4-5 TC Rei 1.K05, 1.003 gesamte Klasse 5a, Unterricht Hr. Keh"
+    },
+    {
+     "klasse": "5b",
+     "std": "6-7",
+     "text": "--- TC Rei fällt aus",
+     "roh": "5b 6-7 --- TC Rei fällt aus"
+    },
+    {
+     "klasse": "6a",
+     "std": "3",
+     "text": "TC Rei 1.K05, 1.104 gesamte Klasse 6a, Unterricht Hr. Keh",
+     "roh": "6a 3 TC Rei 1.K05, 1.104 gesamte Klasse 6a, Unterricht Hr. Keh"
+    },
+    {
+     "klasse": "6a,6b",
+     "std": "8",
+     "text": "--- FÖ Rei fällt aus",
+     "roh": "6a,6b 8 --- FÖ Rei fällt aus"
+    },
+    {
+     "klasse": "6b",
+     "std": "1",
+     "text": "--- SPO Nad fällt aus",
+     "roh": "6b 1 --- SPO Nad fällt aus"
+    },
+    {
+     "klasse": "6b",
+     "std": "2-3",
+     "text": "DE Pie 1.109 für DE Nad",
+     "roh": "6b 2-3 DE Pie 1.109 für DE Nad"
+    },
+    {
+     "klasse": "6c",
+     "std": "2",
+     "text": "TC Rei 1.K05, 1.104 gesamte Klasse 6c, Unterricht Hr. Keh",
+     "roh": "6c 2 TC Rei 1.K05, 1.104 gesamte Klasse 6c, Unterricht Hr. Keh"
+    },
+    {
+     "klasse": "7c",
+     "std": "2-3",
+     "text": "EN Kun 3.104 für EN Sei",
+     "roh": "7c 2-3 EN Kun 3.104 für EN Sei"
+    },
+    {
+     "klasse": "8a,8c",
+     "std": "1",
+     "text": "--- WB Hin fällt aus",
+     "roh": "8a,8c 1 --- WB Hin fällt aus"
+    },
+    {
+     "klasse": "8a",
+     "std": "4-5",
+     "text": "DE (Sei) 3.104 selbst. (a), Aufgaben Fr. Fis",
+     "roh": "8a 4-5 DE (Sei) 3.104 selbst. (a), Aufgaben Fr. Fis"
+    },
+    {
+     "klasse": "8b",
+     "std": "2-3",
+     "text": "EN (Les) 2.011 selbst. (a), Aufgaben Fr. Blu",
+     "roh": "8b 2-3 EN (Les) 2.011 selbst. (a), Aufgaben Fr. Blu"
+    },
+    {
+     "klasse": "8c",
+     "std": "4-5",
+     "text": "MA Ebe 3.004 für MA Hin",
+     "roh": "8c 4-5 MA Ebe 3.004 für MA Hin"
+    },
+    {
+     "klasse": "9b",
+     "std": "2-3",
+     "text": "DE Zim 1.001 für MA Hin",
+     "roh": "9b 2-3 DE Zim 1.001 für MA Hin"
+    },
+    {
+     "klasse": "9b",
+     "std": "4-5",
+     "text": "MA Hof 1.103 für DE Nad",
+     "roh": "9b 4-5 MA Hof 1.103 für DE Nad"
+    },
+    {
+     "klasse": "10c",
+     "std": "4-5",
+     "text": "CH MülB 2.011 für CH Les VKA 2-3 DAZ (Kun) 1.101 selbst. (v), Aufgaben Fr. Kun",
+     "roh": "10c 4-5 CH MülB 2.011 für CH Les VKA 2-3 DAZ (Kun) 1.101 selbst. (v), Aufgaben Fr. Kun"
+    }
+   ],
+   "hinweise": [
+    "GTA-Keramik fällt aus.",
+    "Die Aufsichtsbereiche 1. Etage Altbau und 1. Etage Neubau werden ganztägig zusammengelegt."
+   ],
+   "pdf": "pdf/plan-2026-11-03.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-03.pdf",
+   "sha": "acfe85b4a4bb",
+   "lehrer": {
+    "Amm": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "09:55 Uhr Aufsicht 1.E(N) (für Sei)"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (Bibo) entfällt"
+     }
+    ],
+    "Blu": [
+     {
+      "art": "aufgaben",
+      "handeln": true,
+      "label": "Aufgaben bereitstellen",
+      "text": "8b, 2-3. Std.: EN (Les) 2.011 selbst. (a), Aufgaben Fr. Blu"
+     }
+    ],
+    "Ebe": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 4-5. Std.: MA Ebe 3.004 für MA Hin"
+     }
+    ],
+    "Fis": [
+     {
+      "art": "aufgaben",
+      "handeln": true,
+      "label": "Aufgaben bereitstellen",
+      "text": "8a, 4-5. Std.: DE (Sei) 3.104 selbst. (a), Aufgaben Fr. Fis"
+     }
+    ],
+    "Hin": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8a,8c, 1. Std.: --- WB Hin fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "8c, 4-5. Std.: MA Ebe 3.004 für MA Hin"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9b, 2-3. Std.: DE Zim 1.001 für MA Hin"
+     }
+    ],
+    "Hof": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 4-5. Std.: MA Hof 1.103 für DE Nad"
+     }
+    ],
+    "Keh": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "08:15 Uhr Aufsicht Ke (für Rei)"
+     },
+     {
+      "art": "betreuung",
+      "handeln": true,
+      "label": "Betreuung/Unterricht",
+      "text": "5a, 4-5. Std.: TC Rei 1.K05, 1.003 gesamte Klasse 5a, Unterricht Hr. Keh"
+     },
+     {
+      "art": "betreuung",
+      "handeln": true,
+      "label": "Betreuung/Unterricht",
+      "text": "6a, 3. Std.: TC Rei 1.K05, 1.104 gesamte Klasse 6a, Unterricht Hr. Keh"
+     },
+     {
+      "art": "betreuung",
+      "handeln": true,
+      "label": "Betreuung/Unterricht",
+      "text": "6c, 2. Std.: TC Rei 1.K05, 1.104 gesamte Klasse 6c, Unterricht Hr. Keh"
+     }
+    ],
+    "Kun": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "7c, 2-3. Std.: EN Kun 3.104 für EN Sei"
+     },
+     {
+      "art": "aufgaben",
+      "handeln": true,
+      "label": "Aufgaben bereitstellen",
+      "text": "10c, 4-5. Std.: CH MülB 2.011 für CH Les VKA 2-3 DAZ (Kun) 1.101 selbst. (v), Aufgaben Fr. Kun"
+     }
+    ],
+    "Les": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "8b, 2-3. Std.: EN (Les) 2.011 selbst. (a), Aufgaben Fr. Blu"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "10c, 4-5. Std.: CH MülB 2.011 für CH Les VKA 2-3 DAZ (Kun) 1.101 selbst. (v), Aufgaben Fr. Kun"
+     }
+    ],
+    "MülB": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "10c, 4-5. Std.: CH MülB 2.011 für CH Les VKA 2-3 DAZ (Kun) 1.101 selbst. (v), Aufgaben Fr. Kun"
+     }
+    ],
+    "Nad": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (1./2.E(A)) entfällt"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6b, 1. Std.: --- SPO Nad fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6b, 2-3. Std.: DE Pie 1.109 für DE Nad"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9b, 4-5. Std.: MA Hof 1.103 für DE Nad"
+     }
+    ],
+    "Pie": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6b, 2-3. Std.: DE Pie 1.109 für DE Nad"
+     }
+    ],
+    "Rei": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 08:15 Uhr (Ke) übernimmt Keh"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (Hof 2) entfällt"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:55 Uhr (Ke) entfällt"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "5a, 4-5. Std.: TC Rei 1.K05, 1.003 gesamte Klasse 5a, Unterricht Hr. Keh"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "5b, 6-7. Std.: --- TC Rei fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6a, 3. Std.: TC Rei 1.K05, 1.104 gesamte Klasse 6a, Unterricht Hr. Keh"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6a,6b, 8. Std.: --- FÖ Rei fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6c, 2. Std.: TC Rei 1.K05, 1.104 gesamte Klasse 6c, Unterricht Hr. Keh"
+     }
+    ],
+    "Sei": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 08:15 Uhr (1.E(N)) entfällt"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (1.E(N)) übernimmt Amm"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "7c, 2-3. Std.: EN Kun 3.104 für EN Sei"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "8a, 4-5. Std.: DE (Sei) 3.104 selbst. (a), Aufgaben Fr. Fis"
+     }
+    ],
+    "Zim": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 2-3. Std.: DE Zim 1.001 für MA Hin"
      }
     ]
    }
