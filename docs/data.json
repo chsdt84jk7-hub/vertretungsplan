@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-05T10:12+01:00",
+ "aktualisiert": "2026-11-05T12:15+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -1036,8 +1036,20 @@
     {
      "klasse": "10c",
      "std": "3",
-     "text": "DE (Amm) 3.110 selbst. (v), Aufgaben Fr. Amm VKA 2-6 --- DAZ Kun fällt aus",
-     "roh": "10c 3 DE (Amm) 3.110 selbst. (v), Aufgaben Fr. Amm VKA 2-6 --- DAZ Kun fällt aus"
+     "text": "DE (Amm) 3.110 selbst. (v), Aufgaben Fr. Amm",
+     "roh": "10c 3 DE (Amm) 3.110 selbst. (v), Aufgaben Fr. Amm"
+    },
+    {
+     "klasse": "10c",
+     "std": "4",
+     "text": "CH (Les) 1.003 selbst. (a), Aufgaben auf LernSax - Lernmodul Chemie Salze",
+     "roh": "10c 4 CH (Les) 1.003 selbst. (a), Aufgaben auf LernSax - Lernmodul Chemie Salze"
+    },
+    {
+     "klasse": "10c",
+     "std": "5",
+     "text": "BIO (Les) 1.003 selbst. (v), Aufgaben auf LernSax Modul Biologie - Ernährung und Verdauung - ohne Experimente VKA 2-6 --- DAZ Kun fällt aus",
+     "roh": "10c 5 BIO (Les) 1.003 selbst. (v), Aufgaben auf LernSax Modul Biologie - Ernährung und Verdauung - ohne Experimente VKA 2-6 --- DAZ Kun fällt aus"
     }
    ],
    "hinweise": [
@@ -1046,8 +1058,8 @@
     "Präventionsveranstaltungen Klassen 5c und 6a - 2. / 3. Std., Klassen 5b und 6b - 4. / 5. Std."
    ],
    "pdf": "pdf/plan-2026-11-06.pdf",
-   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-06.pdf",
-   "sha": "a942ef28cd13",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-06a.pdf",
+   "sha": "ee7119f955e5",
    "lehrer": {
     "Amm": [
      {
@@ -1086,7 +1098,7 @@
       "art": "aufgaben",
       "handeln": true,
       "label": "Aufgaben bereitstellen",
-      "text": "10c, 3. Std.: DE (Amm) 3.110 selbst. (v), Aufgaben Fr. Amm VKA 2-6 --- DAZ Kun fällt aus"
+      "text": "10c, 3. Std.: DE (Amm) 3.110 selbst. (v), Aufgaben Fr. Amm"
      }
     ],
     "Die": [
@@ -1232,7 +1244,7 @@
       "art": "faellt_aus",
       "handeln": false,
       "label": "Deine Stunde entfällt",
-      "text": "10c, 3. Std.: DE (Amm) 3.110 selbst. (v), Aufgaben Fr. Amm VKA 2-6 --- DAZ Kun fällt aus"
+      "text": "10c, 5. Std.: BIO (Les) 1.003 selbst. (v), Aufgaben auf LernSax Modul Biologie - Ernährung und Verdauung - ohne Experimente VKA 2-6 --- DAZ Kun fällt aus"
      }
     ],
     "Küh": [
@@ -1265,6 +1277,18 @@
       "handeln": false,
       "label": "Deine Stunde wird vertreten",
       "text": "5b, 3. Std.: DE Zim 1.003 für BIO Les"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "10c, 4. Std.: CH (Les) 1.003 selbst. (a), Aufgaben auf LernSax - Lernmodul Chemie Salze"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "10c, 5. Std.: BIO (Les) 1.003 selbst. (v), Aufgaben auf LernSax Modul Biologie - Ernährung und Verdauung - ohne Experimente VKA 2-6 --- DAZ Kun fällt aus"
      }
     ],
     "Nad": [
