@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-06T02:23+01:00",
+ "aktualisiert": "2026-11-06T14:17+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -597,6 +597,330 @@
       "handeln": true,
       "label": "Aufgaben bereitstellen",
       "text": "8b, 3. Std.: WTH (Zim) 1.K05, 1.004 selbst. (v), Aufgaben Hr. Zim"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Montag, 9. November 2026",
+   "datum": "2026-11-09",
+   "woche": "A-Woche",
+   "erstellt": "06.11.2026",
+   "abwesend": [
+    {
+     "k": "Les",
+     "std": ""
+    }
+   ],
+   "geaendert": [
+    "Blu",
+    "Die",
+    "Fis",
+    "Küh",
+    "Nad",
+    "Ric",
+    "Schm",
+    "Schr",
+    "Ste",
+    "Suk",
+    "Zim"
+   ],
+   "aufsichten": [
+    {
+     "zeit": "12:10",
+     "ort": "Hof 2",
+     "wer": "entfällt",
+     "fuer": "Les"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "E+EG(A)",
+     "wer": "Schm",
+     "fuer": "Les"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "E+EG(A)",
+     "wer": "Suk",
+     "fuer": "Les"
+    }
+   ],
+   "zeilen": [
+    {
+     "klasse": "5b",
+     "std": "4-5",
+     "text": "Suk 1.105 WS Klassebchat",
+     "roh": "5b 4-5 Suk 1.105 WS Klassebchat"
+    },
+    {
+     "klasse": "5c",
+     "std": "2-3",
+     "text": "Ste 1.105 WS Klassenchat",
+     "roh": "5c 2-3 Ste 1.105 WS Klassenchat"
+    },
+    {
+     "klasse": "6a",
+     "std": "2-3",
+     "text": "Schr 1.109 Prävention Gewalt",
+     "roh": "6a 2-3 Schr 1.109 Prävention Gewalt"
+    },
+    {
+     "klasse": "6a",
+     "std": "4",
+     "text": "EN Küh 1.004 statt Di (10.11.) St.1; BIO Les fällt aus",
+     "roh": "6a 4 EN Küh 1.004 statt Di (10.11.) St.1; BIO Les fällt aus"
+    },
+    {
+     "klasse": "6a",
+     "std": "5",
+     "text": "EN Küh 1.004 statt Do (12.11.) St.7; BIO Les fällt aus",
+     "roh": "6a 5 EN Küh 1.004 statt Do (12.11.) St.7; BIO Les fällt aus"
+    },
+    {
+     "klasse": "6b",
+     "std": "4-5",
+     "text": "Schm 1.109 Prrävention Gewalt",
+     "roh": "6b 4-5 Schm 1.109 Prrävention Gewalt"
+    },
+    {
+     "klasse": "7b",
+     "std": "4-5",
+     "text": "DE Zim 1.103",
+     "roh": "7b 4-5 DE Zim 1.103"
+    },
+    {
+     "klasse": "7b",
+     "std": "7",
+     "text": "--- BIO Les fällt aus",
+     "roh": "7b 7 --- BIO Les fällt aus"
+    },
+    {
+     "klasse": "8b",
+     "std": "1",
+     "text": "GE Blu 1.002",
+     "roh": "8b 1 GE Blu 1.002"
+    },
+    {
+     "klasse": "8b",
+     "std": "2-3",
+     "text": "EN Blu 1.002",
+     "roh": "8b 2-3 EN Blu 1.002"
+    },
+    {
+     "klasse": "8b",
+     "std": "4-5",
+     "text": "DE Schr 1.003",
+     "roh": "8b 4-5 DE Schr 1.003"
+    },
+    {
+     "klasse": "8b",
+     "std": "6",
+     "text": "FR Suk 1.004 verlegt von St.8",
+     "roh": "8b 6 FR Suk 1.004 verlegt von St.8"
+    },
+    {
+     "klasse": "8b",
+     "std": "8",
+     "text": "--- FR Suk verlegt nach St.6",
+     "roh": "8b 8 --- FR Suk verlegt nach St.6"
+    },
+    {
+     "klasse": "9b",
+     "std": "6",
+     "text": "ETH Fis 3.105 statt Mo (02.11.) St.7; GEO Ric gehalten am Mo (02.11.) St.7",
+     "roh": "9b 6 ETH Fis 3.105 statt Mo (02.11.) St.7; GEO Ric gehalten am Mo (02.11.) St.7"
+    },
+    {
+     "klasse": "9c",
+     "std": "2",
+     "text": "--- CH Les fällt aus",
+     "roh": "9c 2 --- CH Les fällt aus"
+    },
+    {
+     "klasse": "9c",
+     "std": "3",
+     "text": "DE Nad 1.007 für CH Les",
+     "roh": "9c 3 DE Nad 1.007 für CH Les"
+    },
+    {
+     "klasse": "9c",
+     "std": "6",
+     "text": "INF Die 3.011, 3.012 für BIO Les",
+     "roh": "9c 6 INF Die 3.011, 3.012 für BIO Les"
+    }
+   ],
+   "hinweise": [
+    "Bitte die Raumänderungen auf Grund der Projektarbeit mit der PD Dresden in den Klassenstufen 5 und 6 beachten."
+   ],
+   "pdf": "pdf/plan-2026-11-09.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-09.pdf",
+   "sha": "c1ec335bd00e",
+   "lehrer": {
+    "Blu": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 1. Std.: GE Blu 1.002"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 2-3. Std.: EN Blu 1.002"
+     }
+    ],
+    "Die": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9c, 6. Std.: INF Die 3.011, 3.012 für BIO Les"
+     }
+    ],
+    "Fis": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 6. Std.: ETH Fis 3.105 statt Mo (02.11.) St.7; GEO Ric gehalten am Mo (02.11.) St.7"
+     }
+    ],
+    "Küh": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6a, 4. Std.: EN Küh 1.004 statt Di (10.11.) St.1; BIO Les fällt aus"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6a, 5. Std.: EN Küh 1.004 statt Do (12.11.) St.7; BIO Les fällt aus"
+     }
+    ],
+    "Les": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (Hof 2) entfällt"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (E+EG(A)) übernimmt Schm"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (E+EG(A)) übernimmt Suk"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6a, 4. Std.: EN Küh 1.004 statt Di (10.11.) St.1; BIO Les fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6a, 5. Std.: EN Küh 1.004 statt Do (12.11.) St.7; BIO Les fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7b, 7. Std.: --- BIO Les fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "9c, 2. Std.: --- CH Les fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9c, 3. Std.: DE Nad 1.007 für CH Les"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9c, 6. Std.: INF Die 3.011, 3.012 für BIO Les"
+     }
+    ],
+    "Nad": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9c, 3. Std.: DE Nad 1.007 für CH Les"
+     }
+    ],
+    "Ric": [
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "9b, 6. Std.: ETH Fis 3.105 statt Mo (02.11.) St.7; GEO Ric gehalten am Mo (02.11.) St.7"
+     }
+    ],
+    "Schm": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht E+EG(A) (für Les)"
+     }
+    ],
+    "Schr": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 4-5. Std.: DE Schr 1.003"
+     }
+    ],
+    "Ste": [
+     {
+      "art": "unklar",
+      "handeln": true,
+      "text": "Du stehst unter „Lehrer mit Änderung“ – bitte im PDF nachsehen"
+     }
+    ],
+    "Suk": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht E+EG(A) (für Les)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 6. Std.: FR Suk 1.004 verlegt von St.8"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 8. Std.: --- FR Suk verlegt nach St.6"
+     }
+    ],
+    "Zim": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "7b, 4-5. Std.: DE Zim 1.103"
      }
     ]
    }
