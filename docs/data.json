@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-07T02:13+01:00",
+ "aktualisiert": "2026-11-09T13:11+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -326,6 +326,588 @@
       "handeln": true,
       "label": "Geänderter Unterricht",
       "text": "7b, 4-5. Std.: DE Zim 1.103"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Dienstag, 10. November 2026",
+   "datum": "2026-11-10",
+   "woche": "A-Woche",
+   "erstellt": "09.11.2026",
+   "abwesend": [
+    {
+     "k": "Blu",
+     "std": ""
+    },
+    {
+     "k": "Keh",
+     "std": ""
+    },
+    {
+     "k": "Kun",
+     "std": ""
+    },
+    {
+     "k": "Les",
+     "std": ""
+    },
+    {
+     "k": "Ste",
+     "std": ""
+    }
+   ],
+   "geaendert": [
+    "Amm",
+    "Ebe",
+    "Fis",
+    "Fra",
+    "Hei",
+    "Hin",
+    "Kan",
+    "Küh",
+    "MülB",
+    "Rei",
+    "Schr",
+    "Zim"
+   ],
+   "aufsichten": [
+    {
+     "zeit": "07:15",
+     "ort": "E+EG(A)",
+     "wer": "Kan",
+     "fuer": "Küh"
+    },
+    {
+     "zeit": "08:15",
+     "ort": "1./2.E(A)",
+     "wer": "Küh",
+     "fuer": "Blu"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "Ke",
+     "wer": "Zim",
+     "fuer": "Keh"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "1./2.E(A)",
+     "wer": "Küh",
+     "fuer": "Ste"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "1.E(N)",
+     "wer": "entfällt",
+     "fuer": "Küh"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "1./2.E(A)",
+     "wer": "Hei",
+     "fuer": "Kun"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "Ke",
+     "wer": "Rei",
+     "fuer": "Keh"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "1./2.E(A)",
+     "wer": "Hei",
+     "fuer": "Schr"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "Ke",
+     "wer": "Rei",
+     "fuer": "Keh"
+    }
+   ],
+   "zeilen": [
+    {
+     "klasse": "5a",
+     "std": "2",
+     "text": "Amm 1.105 WS Klassenchat; GTA Hei fällt aus",
+     "roh": "5a 2 Amm 1.105 WS Klassenchat; GTA Hei fällt aus"
+    },
+    {
+     "klasse": "5a",
+     "std": "3",
+     "text": "Amm 1.105 WS Klassenchat",
+     "roh": "5a 3 Amm 1.105 WS Klassenchat"
+    },
+    {
+     "klasse": "5a",
+     "std": "4-5",
+     "text": "EN Küh 3.004 verlegt von St.6-7; TC Keh fällt aus; TC Rei fällt aus",
+     "roh": "5a 4-5 EN Küh 3.004 verlegt von St.6-7; TC Keh fällt aus; TC Rei fällt aus"
+    },
+    {
+     "klasse": "5a",
+     "std": "6-7",
+     "text": "--- EN Küh verlegt nach St.4-5",
+     "roh": "5a 6-7 --- EN Küh verlegt nach St.4-5"
+    },
+    {
+     "klasse": "5b",
+     "std": "6-7",
+     "text": "--- TC Keh fällt aus",
+     "roh": "5b 6-7 --- TC Keh fällt aus"
+    },
+    {
+     "klasse": "5c",
+     "std": "2",
+     "text": "GTA Hei 1.204 GTA Hei fällt aus",
+     "roh": "5c 2 GTA Hei 1.204 GTA Hei fällt aus"
+    },
+    {
+     "klasse": "6a",
+     "std": "1",
+     "text": "--- EN Küh gehalten am Mo (09.11.) St.4",
+     "roh": "6a 1 --- EN Küh gehalten am Mo (09.11.) St.4"
+    },
+    {
+     "klasse": "6a",
+     "std": "3",
+     "text": "TC (Keh) 1.K10, 1.109 selbst. (v), Unterricht mit Hr.Reißig",
+     "roh": "6a 3 TC (Keh) 1.K10, 1.109 selbst. (v), Unterricht mit Hr.Reißig"
+    },
+    {
+     "klasse": "6b",
+     "std": "7",
+     "text": "--- BIO MülB gehalten am Do (05.11.) St.4",
+     "roh": "6b 7 --- BIO MülB gehalten am Do (05.11.) St.4"
+    },
+    {
+     "klasse": "6c",
+     "std": "2",
+     "text": "TC (Keh) selbst. (v), Unterricht mit Hr.Reißig",
+     "roh": "6c 2 TC (Keh) selbst. (v), Unterricht mit Hr.Reißig"
+    },
+    {
+     "klasse": "6c",
+     "std": "2",
+     "text": "TC Rei 1.K05, 1.109",
+     "roh": "6c 2 TC Rei 1.K05, 1.109"
+    },
+    {
+     "klasse": "6c",
+     "std": "4-5",
+     "text": "Fis 1.109 Prävention Gewalt",
+     "roh": "6c 4-5 Fis 1.109 Prävention Gewalt"
+    },
+    {
+     "klasse": "6c",
+     "std": "6-7",
+     "text": "DE Zim 3.104 für EN Blu",
+     "roh": "6c 6-7 DE Zim 3.104 für EN Blu"
+    },
+    {
+     "klasse": "7a",
+     "std": "1",
+     "text": "--- EN Blu fällt aus",
+     "roh": "7a 1 --- EN Blu fällt aus"
+    },
+    {
+     "klasse": "7c",
+     "std": "6-7",
+     "text": "--- ETH Ste fällt aus",
+     "roh": "7c 6-7 --- ETH Ste fällt aus"
+    },
+    {
+     "klasse": "8b",
+     "std": "2",
+     "text": "BIO MülB 2.011 statt Mi (11.11.) St.1; CH Les fällt aus",
+     "roh": "8b 2 BIO MülB 2.011 statt Mi (11.11.) St.1; CH Les fällt aus"
+    },
+    {
+     "klasse": "8b",
+     "std": "3",
+     "text": "BIO MülB 2.011 statt Mi (25.11.) St.1; CH Les fällt aus",
+     "roh": "8b 3 BIO MülB 2.011 statt Mi (25.11.) St.1; CH Les fällt aus"
+    },
+    {
+     "klasse": "8b",
+     "std": "4-5",
+     "text": "MA Ebe 3.105",
+     "roh": "8b 4-5 MA Ebe 3.105"
+    },
+    {
+     "klasse": "8c",
+     "std": "4-5",
+     "text": "MA Hin 1.105 verlegt von St.6-7; GEO Küh verlegt nach St.6-7",
+     "roh": "8c 4-5 MA Hin 1.105 verlegt von St.6-7; GEO Küh verlegt nach St.6-7"
+    },
+    {
+     "klasse": "8c",
+     "std": "6-7",
+     "text": "GEO Küh 3.004 verlegt von St.4-5; MA Hin verlegt nach St.4-5",
+     "roh": "8c 6-7 GEO Küh 3.004 verlegt von St.4-5; MA Hin verlegt nach St.4-5"
+    },
+    {
+     "klasse": "9a,9c",
+     "std": "8-9",
+     "text": "--- SPO:w Ste fällt aus",
+     "roh": "9a,9c 8-9 --- SPO:w Ste fällt aus"
+    },
+    {
+     "klasse": "10c",
+     "std": "4-5",
+     "text": "CH MülB 2.011 für CH Les",
+     "roh": "10c 4-5 CH MülB 2.011 für CH Les"
+    }
+   ],
+   "hinweise": [
+    "Fest der Sprache ab 14:30 Uhr in der Aula",
+    "DAZ-Klasse hat Unterricht in Regelklassen!"
+   ],
+   "pdf": "pdf/plan-2026-11-10.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-10.pdf",
+   "sha": "e3c6a8458646",
+   "lehrer": {
+    "Amm": [
+     {
+      "art": "unklar",
+      "handeln": true,
+      "text": "Du stehst unter „Lehrer mit Änderung“ – bitte im PDF nachsehen"
+     }
+    ],
+    "Blu": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 08:15 Uhr (1./2.E(A)) übernimmt Küh"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6c, 6-7. Std.: DE Zim 3.104 für EN Blu"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7a, 1. Std.: --- EN Blu fällt aus"
+     }
+    ],
+    "Ebe": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 4-5. Std.: MA Ebe 3.105"
+     }
+    ],
+    "Fis": [
+     {
+      "art": "unklar",
+      "handeln": true,
+      "text": "Du stehst unter „Lehrer mit Änderung“ – bitte im PDF nachsehen"
+     }
+    ],
+    "Fra": [
+     {
+      "art": "unklar",
+      "handeln": true,
+      "text": "Du stehst unter „Lehrer mit Änderung“ – bitte im PDF nachsehen"
+     }
+    ],
+    "Hei": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht 1./2.E(A) (für Kun)"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht 1./2.E(A) (für Schr)"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "5a, 2. Std.: Amm 1.105 WS Klassenchat; GTA Hei fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "5c, 2. Std.: GTA Hei 1.204 GTA Hei fällt aus"
+     }
+    ],
+    "Hin": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 4-5. Std.: MA Hin 1.105 verlegt von St.6-7; GEO Küh verlegt nach St.6-7"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 6-7. Std.: GEO Küh 3.004 verlegt von St.4-5; MA Hin verlegt nach St.4-5"
+     }
+    ],
+    "Kan": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "07:15 Uhr Aufsicht E+EG(A) (für Küh)"
+     }
+    ],
+    "Keh": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (Ke) übernimmt Zim"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (Ke) übernimmt Rei"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (Ke) übernimmt Rei"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "5a, 4-5. Std.: EN Küh 3.004 verlegt von St.6-7; TC Keh fällt aus; TC Rei fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "5b, 6-7. Std.: --- TC Keh fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6a, 3. Std.: TC (Keh) 1.K10, 1.109 selbst. (v), Unterricht mit Hr.Reißig"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6c, 2. Std.: TC (Keh) selbst. (v), Unterricht mit Hr.Reißig"
+     }
+    ],
+    "Kun": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (1./2.E(A)) übernimmt Hei"
+     }
+    ],
+    "Küh": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 07:15 Uhr (E+EG(A)) übernimmt Kan"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "08:15 Uhr Aufsicht 1./2.E(A) (für Blu)"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "12:10 Uhr Aufsicht 1./2.E(A) (für Ste)"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (1.E(N)) entfällt"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "5a, 4-5. Std.: EN Küh 3.004 verlegt von St.6-7; TC Keh fällt aus; TC Rei fällt aus"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "5a, 6-7. Std.: --- EN Küh verlegt nach St.4-5"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6a, 1. Std.: --- EN Küh gehalten am Mo (09.11.) St.4"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 4-5. Std.: MA Hin 1.105 verlegt von St.6-7; GEO Küh verlegt nach St.6-7"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 6-7. Std.: GEO Küh 3.004 verlegt von St.4-5; MA Hin verlegt nach St.4-5"
+     }
+    ],
+    "Les": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8b, 2. Std.: BIO MülB 2.011 statt Mi (11.11.) St.1; CH Les fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8b, 3. Std.: BIO MülB 2.011 statt Mi (25.11.) St.1; CH Les fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "10c, 4-5. Std.: CH MülB 2.011 für CH Les"
+     }
+    ],
+    "MülB": [
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6b, 7. Std.: --- BIO MülB gehalten am Do (05.11.) St.4"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 2. Std.: BIO MülB 2.011 statt Mi (11.11.) St.1; CH Les fällt aus"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 3. Std.: BIO MülB 2.011 statt Mi (25.11.) St.1; CH Les fällt aus"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "10c, 4-5. Std.: CH MülB 2.011 für CH Les"
+     }
+    ],
+    "Rei": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht Ke (für Keh)"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht Ke (für Keh)"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "5a, 4-5. Std.: EN Küh 3.004 verlegt von St.6-7; TC Keh fällt aus; TC Rei fällt aus"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6c, 2. Std.: TC Rei 1.K05, 1.109"
+     }
+    ],
+    "Reißig": [
+     {
+      "art": "erwaehnt",
+      "handeln": true,
+      "label": "Du bist erwähnt",
+      "text": "6a, 3. Std.: TC (Keh) 1.K10, 1.109 selbst. (v), Unterricht mit Hr.Reißig"
+     },
+     {
+      "art": "erwaehnt",
+      "handeln": true,
+      "label": "Du bist erwähnt",
+      "text": "6c, 2. Std.: TC (Keh) selbst. (v), Unterricht mit Hr.Reißig"
+     }
+    ],
+    "Schr": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (1./2.E(A)) übernimmt Hei"
+     }
+    ],
+    "Ste": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (1./2.E(A)) übernimmt Küh"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7c, 6-7. Std.: --- ETH Ste fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "9a,9c, 8-9. Std.: --- SPO:w Ste fällt aus"
+     }
+    ],
+    "Zim": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "09:55 Uhr Aufsicht Ke (für Keh)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6c, 6-7. Std.: DE Zim 3.104 für EN Blu"
      }
     ]
    }
