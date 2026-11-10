@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-10T12:18+01:00",
+ "aktualisiert": "2026-11-10T22:22+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -240,6 +240,12 @@
    "hinweise": [
     "Fest der Sprache ab 14:30 Uhr in der Aula",
     "DAZ-Klasse hat Unterricht in Regelklassen!"
+   ],
+   "abwesende_klassen": [
+    {
+     "k": "7b",
+     "std": ""
+    }
    ],
    "pdf": "pdf/plan-2026-11-10.pdf",
    "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-10.pdf",
@@ -586,6 +592,180 @@
       "text": "6c, 6-7. Std.: DE Zim 3.104 für EN Blu"
      }
     ]
+   },
+   "klassen": {
+    "5a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "2. Std.: Amm 1.105 WS Klassenchat; GTA Hei fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "3. Std.: Amm 1.105 WS Klassenchat"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "4.–5. Std.: EN Küh 3.004 verlegt von St.6-7; TC Keh fällt aus; TC Rei fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "6.–7. Std.: EN Küh verlegt nach St.4-5"
+     }
+    ],
+    "5b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "6.–7. Std.: TC Keh fällt aus"
+     }
+    ],
+    "5c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "2. Std.: GTA Hei 1.204 GTA Hei fällt aus"
+     }
+    ],
+    "6a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt (vorgeholt)",
+      "text": "1. Std.: EN Küh gehalten am Mo (09.11.) St.4"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "3. Std.: TC (Keh) 1.K10, 1.109 selbst. (v), Unterricht mit Hr.Reißig"
+     }
+    ],
+    "6b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt (vorgeholt)",
+      "text": "7. Std.: BIO MülB gehalten am Do (05.11.) St.4"
+     }
+    ],
+    "6c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "2. Std.: TC (Keh) selbst. (v), Unterricht mit Hr.Reißig"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "2. Std.: TC Rei 1.K05, 1.109"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "4.–5. Std.: Fis 1.109 Prävention Gewalt"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "6.–7. Std.: DE Zim 3.104 für EN Blu"
+     }
+    ],
+    "7a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "1. Std.: EN Blu fällt aus"
+     }
+    ],
+    "7b": [
+     {
+      "art": "klasse_weg",
+      "handeln": true,
+      "label": "Ganze Klasse",
+      "text": "Klasse ist nicht im Unterricht"
+     }
+    ],
+    "7c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "6.–7. Std.: ETH Ste fällt aus"
+     }
+    ],
+    "8b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "2. Std.: BIO MülB 2.011 statt Mi (11.11.) St.1; CH Les fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "3. Std.: BIO MülB 2.011 statt Mi (25.11.) St.1; CH Les fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "4.–5. Std.: MA Ebe 3.105"
+     }
+    ],
+    "8c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "4.–5. Std.: MA Hin 1.105 verlegt von St.6-7; GEO Küh verlegt nach St.6-7"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "6.–7. Std.: GEO Küh 3.004 verlegt von St.4-5; MA Hin verlegt nach St.4-5"
+     }
+    ],
+    "9a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "8.–9. Std.: SPO:w Ste fällt aus"
+     }
+    ],
+    "9c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "8.–9. Std.: SPO:w Ste fällt aus"
+     }
+    ],
+    "10c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "4.–5. Std.: CH MülB 2.011 für CH Les"
+     }
+    ]
    }
   },
   {
@@ -721,6 +901,7 @@
    "hinweise": [
     "DAZ-Klasse hat Unterricht in Regelklassen!"
    ],
+   "abwesende_klassen": [],
    "pdf": "pdf/plan-2026-11-11.pdf",
    "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-11.pdf",
    "sha": "8f839a828ce6",
@@ -904,6 +1085,60 @@
       "handeln": true,
       "label": "Du bist erwähnt",
       "text": "6b, 4. Std.: TC (Keh) 1.K10 selbst. (v), Ganze Klasse mit Hr.Passek"
+     }
+    ]
+   },
+   "klassen": {
+    "6a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "4.–5. Std.: MA Fra 1.004 für MA Jag"
+     }
+    ],
+    "6b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "4. Std.: TC Pas 1.K05, 1.007"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "4. Std.: TC (Keh) 1.K10 selbst. (v), Ganze Klasse mit Hr.Passek"
+     }
+    ],
+    "8b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt (vorgeholt)",
+      "text": "1. Std.: BIO MülB gehalten am Di (10.11.) St.2"
+     }
+    ],
+    "8c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "1.–3. Std.: WTH (Keh) selbst. (v), Aufgaben zu Hause"
+     }
+    ],
+    "9b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "2.–3. Std.: MA Hin 1.002 verlegt von St.6-7; PH Jag fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "6.–7. Std.: MA Hin verlegt nach St.2-3"
      }
     ]
    }
