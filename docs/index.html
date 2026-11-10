@@ -28,6 +28,10 @@ header{display:flex;align-items:center;gap:12px;margin:8px 0 16px}
 .brand{display:flex;align-items:center;gap:10px;min-width:0}
 .brand img{width:44px;height:44px;border-radius:50%;flex:0 0 auto}
 .welcome{display:block;width:min(260px,70%);margin:4px auto 14px}
+.seg{display:flex;background:var(--info-bg);border-radius:12px;padding:4px;margin-bottom:12px}
+.seg button{flex:1;background:transparent;color:var(--muted);padding:9px 10px;border-radius:9px}
+.seg button[aria-pressed=true]{background:var(--card);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.err{color:var(--act);font-size:.85rem;margin-top:6px}
 h1{font-size:1.2rem;margin:0;letter-spacing:-.01em;line-height:1.2}
 h1 span{color:var(--muted);font-weight:500}
 .upd{font-size:.8rem;color:var(--muted);margin-top:2px}
@@ -86,15 +90,20 @@ summary{cursor:pointer;color:var(--muted);font-size:.85rem}
   <section class="card" id="kcard">
     <div id="kform">
       <img class="welcome" src="logo.png" alt="Schillerschule Dresden">
-      <label for="k">Dein Lehrerkürzel (wird auf diesem Gerät gespeichert)</label>
+      <div class="seg" role="group" aria-label="Ich bin">
+        <button type="button" id="r-s" aria-pressed="true">Schüler/in</button>
+        <button type="button" id="r-l" aria-pressed="false">Lehrkraft</button>
+      </div>
+      <label for="k" id="klabel">Deine Klasse (wird auf diesem Gerät gespeichert)</label>
       <div class="krow">
-        <input id="k" list="klist" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="z. B. Kun" maxlength="6">
+        <input id="k" list="klist" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="z. B. 8c" maxlength="6">
         <datalist id="klist"></datalist>
         <button id="go">Speichern</button>
       </div>
+      <div class="err hidden" id="kerr"></div>
     </div>
     <div id="kshow" class="kbar hidden">
-      <div class="who">Dein Kürzel<b id="kname"></b></div>
+      <div class="who"><span id="kwho">Dein Kürzel</span><b id="kname"></b></div>
       <button class="linkbtn" id="kedit">Ändern</button>
     </div>
   </section>
@@ -109,12 +118,12 @@ summary{cursor:pointer;color:var(--muted);font-size:.85rem}
   <section class="card hidden" id="pushcard">
     <h2 style="margin-top:0">🔔 Push-Benachrichtigungen</h2>
     <div id="push-off">
-      <p class="small" style="margin-top:0">Du bekommst eine Nachricht aufs Handy, sobald der Plan etwas für <b class="pk"></b> enthält, das du tun musst – Vertretung, Aufsicht, Betreuung oder Aufgaben.</p>
+      <p class="small" style="margin-top:0" id="pushtext"></p>
       <button class="bigbtn" id="push-enable">Push-Benachrichtigungen aktivieren</button>
     </div>
     <div id="push-on" class="hidden">
       <div class="pushstate on">✓ Push ist an für <span class="pk"></span></div>
-      <p class="small">Du bekommst eine Nachricht, sobald es für dich etwas zu tun gibt. <button class="linkbtn" id="push-disable">Ausschalten</button></p>
+      <p class="small"><span id="pushtext2"></span> <button class="linkbtn" id="push-disable">Ausschalten</button></p>
     </div>
     <div id="push-ios" class="hint hidden">
       Auf dem iPhone funktionieren Push-Nachrichten nur, wenn die App auf dem Home-Bildschirm liegt:
@@ -140,26 +149,58 @@ const params = new URLSearchParams(location.search);
 let DATA = null, current = params.get('d');
 let kz = params.get('k') || store.get('kuerzel') || '';
 if(kz) store.set('kuerzel', kz);
+if(kz && /^\s*\d/.test(kz)) store.set('rolle', 'schueler'); else if(kz) store.set('rolle', 'lehrer');
 
 const slug = k => k.toLowerCase().replace(/ä/g,'ae').replace(/ö/g,'oe').replace(/ü/g,'ue').replace(/ß/g,'ss').replace(/[^a-z0-9]/g,'');
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const findKey = (plan, k) => Object.keys(plan.lehrer||{}).find(x => x.toLowerCase() === k.toLowerCase());
+const klasseNorm = k => { const m = String(k||'').match(/^\s*(\d{1,2})\s*([a-zA-Z])\s*$/); return m ? String(+m[1]) + m[2].toLowerCase() : ''; };
+const istKlasse = k => !!klasseNorm(k);
+const bucket = (plan, k) => istKlasse(k) ? (plan.klassen || {}) : (plan.lehrer || {});
+const findKey = (plan, k) => istKlasse(k) ? (klasseNorm(k) in (plan.klassen||{}) ? klasseNorm(k) : undefined)
+  : Object.keys(plan.lehrer||{}).find(x => x.toLowerCase() === k.toLowerCase());
+let rolle = store.get('rolle') || 'schueler';
 const today = () => new Date().toLocaleDateString('sv-SE', {timeZone:'Europe/Berlin'});
 const isIOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 const standalone = window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 const pushSupported = 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
 
 /* ---------- Kürzel ---------- */
+function setRolle(r){
+  rolle = r; store.set('rolle', r);
+  $('#r-s').setAttribute('aria-pressed', r === 'schueler');
+  $('#r-l').setAttribute('aria-pressed', r === 'lehrer');
+  $('#klabel').textContent = r === 'schueler' ? 'Deine Klasse (wird auf diesem Gerät gespeichert)' : 'Dein Lehrerkürzel (wird auf diesem Gerät gespeichert)';
+  $('#k').placeholder = r === 'schueler' ? 'z. B. 8c' : 'z. B. Kun';
+  $('#kerr').classList.add('hidden');
+  fillList();
+}
+function fillList(){
+  if(!DATA) return;
+  const ks = new Set();
+  DATA.plaene.forEach(p => Object.keys(rolle === 'schueler' ? (p.klassen||{}) : (p.lehrer||{})).forEach(k => ks.add(k)));
+  $('#klist').innerHTML = [...ks].sort((a,b) => a.localeCompare(b, 'de', {numeric:true})).map(k => `<option value="${esc(k)}">`).join('');
+}
+$('#r-s').onclick = () => setRolle('schueler');
+$('#r-l').onclick = () => setRolle('lehrer');
+
 function showK(){
   const has = !!kz;
   $('#kform').classList.toggle('hidden', has);
   $('#kshow').classList.toggle('hidden', !has);
   $('#kname').textContent = kz;
-  if(!has){ $('#k').value = ''; setTimeout(() => $('#k').focus(), 50); }
+  $('#kwho').textContent = istKlasse(kz) ? 'Deine Klasse' : 'Dein Kürzel';
+  if(!has){ $('#k').value = ''; setRolle(rolle); setTimeout(() => $('#k').focus(), 50); }
 }
 async function saveK(){
-  const neu = $('#k').value.trim();
+  let neu = $('#k').value.trim();
   if(!neu) return;
+  if(rolle === 'schueler'){
+    neu = klasseNorm(neu);
+    if(!neu){ $('#kerr').textContent = 'Bitte die Klasse so eingeben: Zahl und Buchstabe, z. B. 8c'; $('#kerr').classList.remove('hidden'); return; }
+  }else if(istKlasse(neu)){
+    $('#kerr').textContent = 'Das sieht aus wie eine Klasse. Oben auf „Schüler/in“ tippen.'; $('#kerr').classList.remove('hidden'); return;
+  }
+  $('#kerr').classList.add('hidden');
   kz = neu; store.set('kuerzel', kz);
   const u = new URL(location); u.searchParams.delete('k'); u.searchParams.delete('d'); history.replaceState(null, '', u);
   showK();
@@ -188,8 +229,7 @@ async function load(){
   const t = new Date(DATA.aktualisiert);
   $('#upd').textContent = 'Letzte Änderung ' + t.toLocaleString('de-DE',{weekday:'short',hour:'2-digit',minute:'2-digit'});
   $('#src').href = DATA.quelle;
-  const ks = new Set(); DATA.plaene.forEach(p => Object.keys(p.lehrer).forEach(k => ks.add(k)));
-  $('#klist').innerHTML = [...ks].sort().map(k => `<option value="${esc(k)}">`).join('');
+  fillList();
   const plaene = DATA.plaene.filter(p => p.datum >= today());
   DATA.sichtbar = plaene.length ? plaene : DATA.plaene.slice(-1);
   if(!DATA.sichtbar.find(p => p.datum === current)) current = DATA.sichtbar[0] && DATA.sichtbar[0].datum;
@@ -201,7 +241,7 @@ function render(){
   const k = kz.trim();
   $('#tabs').innerHTML = DATA.sichtbar.map(p => {
     const key = k && findKey(p, k);
-    const act = key && p.lehrer[key].some(i => i.handeln);
+    const act = key && bucket(p, k)[key].some(i => i.handeln);
     const kurz = p.titel.split(',')[0] + ' ' + p.datum.slice(8) + '.' + p.datum.slice(5,7) + '.';
     return `<button class="tab" role="tab" aria-selected="${p.datum===current}" data-d="${p.datum}">${act?'<span class="dot"></span>':''}${esc(kurz)}</button>`;
   }).join('');
@@ -212,9 +252,11 @@ function render(){
 
   let html = '';
   const key = k && findKey(p, k);
-  const items = key ? p.lehrer[key] : [];
+  const items = key ? bucket(p, k)[key] : [];
+  const kl = istKlasse(k);
   const act = items.filter(i => i.handeln), info = items.filter(i => !i.handeln);
-  if(!k) html += '<div class="status none">Gib oben dein Kürzel ein.</div>';
+  if(!k) html += '<div class="status none">Gib oben deine Klasse oder dein Kürzel ein.</div>';
+  else if(kl && act.length) html += `<div class="status act">⚠️ ${act.length === 1 ? 'Eine Änderung' : act.length + ' Änderungen'} für ${esc(k)}</div>`;
   else if(act.length) html += `<div class="status act">⚠️ ${act.length === 1 ? 'Eine Sache' : act.length + ' Sachen'} für dich</div>`;
   else if(info.length) html += '<div class="status ok">✓ Nichts zu tun – nur Infos</div>';
   else html += `<div class="status ok">✓ Keine Änderungen für ${esc(k)}</div>`;
@@ -307,6 +349,10 @@ function renderPushCard(){
   if(!kz || !DATA || !DATA.topic_prefix){ $('#pushcard').classList.add('hidden'); return; }
   $('#pushcard').classList.remove('hidden');
   document.querySelectorAll('.pk').forEach(e => e.textContent = kz);
+  $('#pushtext').innerHTML = istKlasse(kz)
+    ? `Du bekommst eine Nachricht aufs Handy, sobald sich im Plan etwas für die Klasse <b>${esc(kz)}</b> ändert – Ausfall, Vertretung, Raum oder Verlegung.`
+    : `Du bekommst eine Nachricht aufs Handy, sobald der Plan etwas für <b>${esc(kz)}</b> enthält, das du tun musst – Vertretung, Aufsicht, Betreuung oder Aufgaben.`;
+  $('#pushtext2').textContent = istKlasse(kz) ? 'Du bekommst eine Nachricht, sobald sich für deine Klasse etwas ändert.' : 'Du bekommst eine Nachricht, sobald es für dich etwas zu tun gibt.';
   const show = id => ['push-off','push-on','push-ios','push-blocked','push-unsupported'].forEach(x => $('#'+x).classList.toggle('hidden', x !== id));
   if(!DATA.vapid_public) show('push-unsupported');
   else if(isIOS && !standalone && !pushSupported) show('push-ios');

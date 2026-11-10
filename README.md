@@ -24,6 +24,13 @@ Alles läuft kostenlos und ohne Server: **GitHub** prüft den Plan alle 5 Minute
 
 Fertig. Den Link zur App an die Kolleginnen und Kollegen schicken.
 
+## Für Schülerinnen und Schüler
+
+1. App-Link öffnen, oben **„Schüler/in“** wählen, die Klasse eingeben (z. B. `8c`) und **Speichern**.
+2. Zum Home-Bildschirm hinzufügen (siehe unten) und **„Push-Benachrichtigungen aktivieren“**.
+
+Die App zeigt nur die Änderungen der eigenen Klasse: Ausfall, Vertretung, Verlegung, selbstständiges Arbeiten und Hinweise, die die Klasse oder Klassenstufe nennen. Push kommt bei jeder neuen oder geänderten Zeile für die Klasse.
+
 ## Für die Lehrkräfte
 
 1. App-Link öffnen, Kürzel eingeben, **Speichern**. Das Kürzel bleibt auf dem Gerät gespeichert.

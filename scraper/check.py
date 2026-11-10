@@ -71,7 +71,8 @@ def find_pdfs(html):
 
 def notify(k, plan, items, url, update, wp):
     lines = [("• " + (i.get("label") + ": " if i.get("label") else "") + i["text"]) for i in items if i["handeln"]]
-    title = ("Aktualisiert: " if update else "") + f"Vertretungsplan {plan['titel'].rsplit(' ', 1)[0]}"
+    tag = plan['titel'].rsplit(' ', 1)[0]
+    title = ("Aktualisiert: " if update else "") + (f"Klasse {k} · {tag}" if pp.ist_klasse(k) else f"Vertretungsplan {tag}")
     message = "\n".join(lines)[:3800]
     click = f"{url}?k={urllib.parse.quote(k)}&d={plan['datum']}" if url else ""
     try:
@@ -131,10 +132,9 @@ def run(now, heute, state, wp, dry):
         plan["pdf"] = f"pdf/plan-{datum}.pdf"
         plan["quelle"] = l["url"]
         plan["sha"] = hashlib.sha1(raw).hexdigest()[:12]
-        plan["lehrer"] = {}
-        for k in pp.kuerzel_im_plan(plan):
-            items = pp.fuer_kuerzel(plan, k)
-            plan["lehrer"][k] = items
+        plan["lehrer"] = {k: pp.fuer_kuerzel(plan, k) for k in pp.kuerzel_im_plan(plan)}
+        plan["klassen"] = {k: pp.fuer_klasse(plan, k) for k in pp.klassen_im_plan(plan)}
+        for k, items in list(plan["lehrer"].items()) + list(plan["klassen"].items()):
             aktion = [i["text"] for i in items if i["handeln"]]
             if not aktion or not PREFIX:
                 continue

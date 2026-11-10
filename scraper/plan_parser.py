@@ -56,6 +56,7 @@ def parse(text, table_rows=None):
         plan["erstellt"] = m.group(1)
 
     plan["abwesend"] = _list_after(text, "Abwesende Lehrer:", [s for s in STOPS if s != "Abwesende Lehrer:"])
+    plan["abwesende_klassen"] = abwesende_klassen(text)
     plan["geaendert"] = [x["k"] for x in _list_after(text, "Lehrer mit Änderung:", [s for s in STOPS if s != "Lehrer mit Änderung:"])]
 
     for zeit, ort, wer, fuer in AUFSICHT.findall(text):
@@ -177,3 +178,74 @@ def topic_slug(k):
     for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss")):
         t = t.replace(a, b)
     return re.sub(r"[^a-z0-9]", "", t)
+
+
+# ---------------------------------------------------------------------------
+# Schülersicht: Änderungen pro Klasse
+# ---------------------------------------------------------------------------
+KLASSE_RE = re.compile(r"(?<!\d)(\d{1,2})\s?([a-z])(?![a-zäöü])")
+
+
+def klasse_norm(k):
+    m = re.fullmatch(r"\s*(\d{1,2})\s*([a-zA-Z])\s*", k or "")
+    return f"{int(m.group(1))}{m.group(2).lower()}" if m else ""
+
+
+def ist_klasse(k):
+    return bool(klasse_norm(k))
+
+
+def abwesende_klassen(text):
+    m = re.search(r"Abwesende Klassen:\s*(.*)", text)
+    if not m:
+        return []
+    return [{"k": f"{int(n)}{b}", "std": std or ""} for n, b, std in re.findall(r"(\d{1,2})([a-z])(?:\s*\(([^)]*)\))?", m.group(1))]
+
+
+def klassen_im_plan(plan):
+    ks = set()
+    for z in plan["zeilen"]:
+        for teil in z["klasse"].split(","):
+            if klasse_norm(teil):
+                ks.add(klasse_norm(teil))
+    ks |= {a["k"] for a in plan.get("abwesende_klassen", [])}
+    return sorted(ks, key=lambda k: (int(k[:-1]), k[-1]))
+
+
+def _schueler_text(t):
+    t = re.sub(r"^---\s*", "", t).strip()
+    return t
+
+
+def fuer_klasse(plan, k):
+    k = klasse_norm(k)
+    items = []
+    for a in plan.get("abwesende_klassen", []):
+        if a["k"] == k:
+            items.append({"art": "klasse_weg", "handeln": True, "label": "Ganze Klasse",
+                          "text": "Klasse ist nicht im Unterricht" + (f" (Std. {a['std']})" if a["std"] else "")})
+    for z in plan["zeilen"]:
+        if k not in {klasse_norm(t) for t in z["klasse"].split(",")}:
+            continue
+        t = z["text"]
+        if t.startswith("---") and "verlegt nach" in t:
+            label = "Verlegt"
+        elif t.startswith("---") and "gehalten am" in t:
+            label = "Entfällt (vorgeholt)"
+        elif t.startswith("---"):
+            label = "Entfällt"
+        elif "selbst." in t:
+            label = "Selbstständig"
+        elif "verlegt von" in t:
+            label = "Verlegt"
+        elif re.search(r"\bfür\s", t):
+            label = "Vertretung"
+        else:
+            label = "Änderung"
+        items.append({"art": "stunde", "handeln": True, "label": label,
+                      "text": f"{z['std'].replace('-', '.–')}. Std.: {_schueler_text(t)}"})
+    stufe = k[:-1]
+    for h in plan.get("hinweise", []):
+        if re.search(rf"(?<!\d){stufe}\s?{k[-1]}(?![a-zäöü])", h) or re.search(rf"Klassenstufe\s*{stufe}(?!\d)", h):
+            items.append({"art": "hinweis", "handeln": True, "label": "Hinweis", "text": h})
+    return items

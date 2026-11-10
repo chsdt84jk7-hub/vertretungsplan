@@ -34,5 +34,16 @@ assert any(i["art"] == "aufsicht" for i in zim)
 _, fra = items("plan_2026-10-29.txt", "Fra")
 assert any(i["art"] == "hinweis" for i in fra)            # Nachschreiben-Betreuung
 
+# Schülersicht
+plan30 = pp.parse((HIER / "plan_2026-10-30.txt").read_text(encoding="utf-8"))
+assert plan30["abwesende_klassen"] == [{"k": "8a", "std": "5-9"}]
+k8c = pp.fuer_klasse(plan30, "8c")
+assert len([i for i in k8c if i["art"] == "stunde"]) == 3        # Sport (8b,8c) + 2x Mathe
+assert any("2. Std." in i["text"] and i["label"] == "Entfällt" for i in k8c)
+k8a = pp.fuer_klasse(plan30, "8a")
+assert any(i["art"] == "klasse_weg" for i in k8a) and any(i["art"] == "hinweis" for i in k8a)  # Exkursion
+assert pp.fuer_klasse(plan30, "8 C") == k8c and pp.klasse_norm("08c") == "8c"
+assert "10a" in pp.klassen_im_plan(plan30) and pp.fuer_klasse(plan30, "1a") == []
+
 assert pp.topic_slug("MülB") == "muelb"
 print("Alle Tests bestanden.")
