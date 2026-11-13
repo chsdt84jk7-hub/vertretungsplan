@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-13T02:22+01:00",
+ "aktualisiert": "2026-11-13T12:11+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -1154,6 +1154,100 @@
       "handeln": true,
       "label": "Vertretung",
       "text": "7. Std.: MU Hei 1.203 für INF Die"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Montag, 16. November 2026",
+   "datum": "2026-11-16",
+   "woche": "B-Woche",
+   "erstellt": "13.11.2026",
+   "abwesend": [],
+   "geaendert": [
+    "Fis",
+    "Ric",
+    "Suk"
+   ],
+   "aufsichten": [],
+   "zeilen": [
+    {
+     "klasse": "8b",
+     "std": "6",
+     "text": "FR Suk 1.004 verlegt von St.8",
+     "roh": "8b 6 FR Suk 1.004 verlegt von St.8"
+    },
+    {
+     "klasse": "8b",
+     "std": "8",
+     "text": "--- FR Suk verlegt nach St.6",
+     "roh": "8b 8 --- FR Suk verlegt nach St.6"
+    },
+    {
+     "klasse": "9b",
+     "std": "7",
+     "text": "GEO Ric 1.104 statt Mo (23.11.) St.6; ETH Fis verlegt nach Mo (23.11.) St.6",
+     "roh": "9b 7 GEO Ric 1.104 statt Mo (23.11.) St.6; ETH Fis verlegt nach Mo (23.11.) St.6"
+    }
+   ],
+   "hinweise": [],
+   "abwesende_klassen": [],
+   "pdf": "pdf/plan-2026-11-16.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-16.pdf",
+   "sha": "5e5390659011",
+   "lehrer": {
+    "Fis": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 7. Std.: GEO Ric 1.104 statt Mo (23.11.) St.6; ETH Fis verlegt nach Mo (23.11.) St.6"
+     }
+    ],
+    "Ric": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 7. Std.: GEO Ric 1.104 statt Mo (23.11.) St.6; ETH Fis verlegt nach Mo (23.11.) St.6"
+     }
+    ],
+    "Suk": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 6. Std.: FR Suk 1.004 verlegt von St.8"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 8. Std.: --- FR Suk verlegt nach St.6"
+     }
+    ]
+   },
+   "klassen": {
+    "8b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "6. Std.: FR Suk 1.004 verlegt von St.8"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "8. Std.: FR Suk verlegt nach St.6"
+     }
+    ],
+    "9b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "7. Std.: GEO Ric 1.104 statt Mo (23.11.) St.6; ETH Fis verlegt nach Mo (23.11.) St.6"
      }
     ]
    }
