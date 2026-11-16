@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-14T02:15+01:00",
+ "aktualisiert": "2026-11-16T12:33+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -96,6 +96,254 @@
       "handeln": true,
       "label": "Änderung",
       "text": "7. Std.: GEO Ric 1.104 statt Mo (23.11.) St.6; ETH Fis verlegt nach Mo (23.11.) St.6"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Dienstag, 17. November 2026",
+   "datum": "2026-11-17",
+   "woche": "B-Woche",
+   "erstellt": "16.11.2026",
+   "abwesend": [
+    {
+     "k": "Les",
+     "std": ""
+    },
+    {
+     "k": "MülB",
+     "std": ""
+    }
+   ],
+   "geaendert": [
+    "Amm",
+    "Fis",
+    "Kan",
+    "Küh",
+    "Kun",
+    "Mün",
+    "Schr",
+    "Ste"
+   ],
+   "aufsichten": [
+    {
+     "zeit": "12:10",
+     "ort": "1./2.E(A)",
+     "wer": "entfällt",
+     "fuer": "Ste"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "1.E(N)",
+     "wer": "Ste",
+     "fuer": "Küh"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "Ke",
+     "wer": "Küh",
+     "fuer": "MülB"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "1./2.E(A)",
+     "wer": "Ste",
+     "fuer": "Kun"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "1.E(N)",
+     "wer": "Fis",
+     "fuer": "Amm"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "1./2.E(A)",
+     "wer": "Ste",
+     "fuer": "Schr"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "1.E(N)",
+     "wer": "Küh",
+     "fuer": "Amm"
+    }
+   ],
+   "zeilen": [
+    {
+     "klasse": "6b",
+     "std": "6-7",
+     "text": "--- BIO MülB fällt aus, bereits gehalten",
+     "roh": "6b 6-7 --- BIO MülB fällt aus, bereits gehalten"
+    },
+    {
+     "klasse": "8b",
+     "std": "2-3",
+     "text": "GEO Mün 1.109 statt Do (19.11.) St.4-5; CH Les fällt aus",
+     "roh": "8b 2-3 GEO Mün 1.109 statt Do (19.11.) St.4-5; CH Les fällt aus"
+    }
+   ],
+   "hinweise": [
+    "Zooschule 10c mit Les"
+   ],
+   "abwesende_klassen": [
+    {
+     "k": "10c",
+     "std": ""
+    }
+   ],
+   "pdf": "pdf/plan-2026-11-17.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-17.pdf",
+   "sha": "460ed2ebf8b5",
+   "lehrer": {
+    "Amm": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (1.E(N)) übernimmt Fis"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (1.E(N)) übernimmt Küh"
+     }
+    ],
+    "Fis": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht 1.E(N) (für Amm)"
+     }
+    ],
+    "Kan": [
+     {
+      "art": "unklar",
+      "handeln": true,
+      "text": "Du stehst unter „Lehrer mit Änderung“ – bitte im PDF nachsehen"
+     }
+    ],
+    "Kun": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (1./2.E(A)) übernimmt Ste"
+     }
+    ],
+    "Küh": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (1.E(N)) übernimmt Ste"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "12:10 Uhr Aufsicht Ke (für MülB)"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht 1.E(N) (für Amm)"
+     }
+    ],
+    "Les": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8b, 2-3. Std.: GEO Mün 1.109 statt Do (19.11.) St.4-5; CH Les fällt aus"
+     }
+    ],
+    "MülB": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (Ke) übernimmt Küh"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6b, 6-7. Std.: --- BIO MülB fällt aus, bereits gehalten"
+     }
+    ],
+    "Mün": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 2-3. Std.: GEO Mün 1.109 statt Do (19.11.) St.4-5; CH Les fällt aus"
+     }
+    ],
+    "Schr": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (1./2.E(A)) übernimmt Ste"
+     }
+    ],
+    "Ste": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (1./2.E(A)) entfällt"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "12:10 Uhr Aufsicht 1.E(N) (für Küh)"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht 1./2.E(A) (für Kun)"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht 1./2.E(A) (für Schr)"
+     }
+    ]
+   },
+   "klassen": {
+    "6b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "6.–7. Std.: BIO MülB fällt aus, bereits gehalten"
+     }
+    ],
+    "8b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "2.–3. Std.: GEO Mün 1.109 statt Do (19.11.) St.4-5; CH Les fällt aus"
+     }
+    ],
+    "10c": [
+     {
+      "art": "klasse_weg",
+      "handeln": true,
+      "label": "Ganze Klasse",
+      "text": "Klasse ist nicht im Unterricht"
+     },
+     {
+      "art": "hinweis",
+      "handeln": true,
+      "label": "Hinweis",
+      "text": "Zooschule 10c mit Les"
      }
     ]
    }
