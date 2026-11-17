@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-17T09:02+01:00",
+ "aktualisiert": "2026-11-17T12:37+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -250,6 +250,463 @@
       "handeln": true,
       "label": "Hinweis",
       "text": "Zooschule 10c mit Les"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Donnerstag, 19. November 2026",
+   "datum": "2026-11-19",
+   "woche": "B-Woche",
+   "erstellt": "17.11.2026",
+   "abwesend": [
+    {
+     "k": "Les",
+     "std": ""
+    },
+    {
+     "k": "Sto",
+     "std": ""
+    }
+   ],
+   "geaendert": [
+    "Blu",
+    "Bur",
+    "Die",
+    "Ebe",
+    "Fis",
+    "Gru",
+    "Kan",
+    "Keh",
+    "Kun",
+    "Mün",
+    "Rei",
+    "Ric",
+    "Sei",
+    "Ste"
+   ],
+   "aufsichten": [
+    {
+     "zeit": "09:55",
+     "ort": "1./2.E(A)",
+     "wer": "Fis",
+     "fuer": "Ste"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "1.E(N)",
+     "wer": "entfällt",
+     "fuer": "Fis"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "E+EG(A)",
+     "wer": "Ste",
+     "fuer": "Les"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "Hof 2",
+     "wer": "Blu",
+     "fuer": "Kan"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "1./2.E(A)",
+     "wer": "Bur",
+     "fuer": "Kun"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "1.E(N)",
+     "wer": "entfällt",
+     "fuer": "Bur"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "EG(N)",
+     "wer": "Kun",
+     "fuer": "Sto"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "1./2.E(A)",
+     "wer": "entfällt",
+     "fuer": "Ebe"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "1.E(N)",
+     "wer": "Ebe",
+     "fuer": "Rei"
+    },
+    {
+     "zeit": "12:10",
+     "ort": "E+EG(A)",
+     "wer": "Rei",
+     "fuer": "Les"
+    },
+    {
+     "zeit": "13:15",
+     "ort": "E+EG(A)",
+     "wer": "Mün",
+     "fuer": "Les"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "1.E(N)",
+     "wer": "Bur",
+     "fuer": "Ric"
+    }
+   ],
+   "zeilen": [
+    {
+     "klasse": "5a",
+     "std": "6-7",
+     "text": "--- BIO Les fällt aus",
+     "roh": "5a 6-7 --- BIO Les fällt aus"
+    },
+    {
+     "klasse": "6b",
+     "std": "2-3",
+     "text": "KU Sei 3.006 für KU Sto",
+     "roh": "6b 2-3 KU Sei 3.006 für KU Sto"
+    },
+    {
+     "klasse": "7a",
+     "std": "4-5",
+     "text": "KU Keh 3.006 für KU Sto",
+     "roh": "7a 4-5 KU Keh 3.006 für KU Sto"
+    },
+    {
+     "klasse": "8b",
+     "std": "2-3",
+     "text": "--- EN Blu verlegt nach St.4-5",
+     "roh": "8b 2-3 --- EN Blu verlegt nach St.4-5"
+    },
+    {
+     "klasse": "8b",
+     "std": "4-5",
+     "text": "EN Blu 1.109 verlegt von St.2-3; GEO Mün gehalten am Di (17.11.) St.2-3",
+     "roh": "8b 4-5 EN Blu 1.109 verlegt von St.2-3; GEO Mün gehalten am Di (17.11.) St.2-3"
+    },
+    {
+     "klasse": "8c",
+     "std": "6",
+     "text": "GK (Sto) 3.005 selbst. (v)",
+     "roh": "8c 6 GK (Sto) 3.005 selbst. (v)"
+    },
+    {
+     "klasse": "9b",
+     "std": "4",
+     "text": "EN Kun 1.105 für BIO Les",
+     "roh": "9b 4 EN Kun 1.105 für BIO Les"
+    }
+   ],
+   "hinweise": [
+    "Zooschule 10a"
+   ],
+   "abwesende_klassen": [
+    {
+     "k": "10a",
+     "std": ""
+    }
+   ],
+   "pdf": "pdf/plan-2026-11-19.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-19.pdf",
+   "sha": "c72c6d32e088",
+   "lehrer": {
+    "Blu": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "09:55 Uhr Aufsicht Hof 2 (für Kan)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 2-3. Std.: --- EN Blu verlegt nach St.4-5"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8b, 4-5. Std.: EN Blu 1.109 verlegt von St.2-3; GEO Mün gehalten am Di (17.11.) St.2-3"
+     }
+    ],
+    "Bur": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "11:50 Uhr Aufsicht 1./2.E(A) (für Kun)"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (1.E(N)) entfällt"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht 1.E(N) (für Ric)"
+     }
+    ],
+    "Die": [
+     {
+      "art": "unklar",
+      "handeln": true,
+      "text": "Du stehst unter „Lehrer mit Änderung“ – bitte im PDF nachsehen"
+     }
+    ],
+    "Ebe": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (1./2.E(A)) entfällt"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "12:10 Uhr Aufsicht 1.E(N) (für Rei)"
+     }
+    ],
+    "Fis": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "09:55 Uhr Aufsicht 1./2.E(A) (für Ste)"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (1.E(N)) entfällt"
+     }
+    ],
+    "Gru": [
+     {
+      "art": "unklar",
+      "handeln": true,
+      "text": "Du stehst unter „Lehrer mit Änderung“ – bitte im PDF nachsehen"
+     }
+    ],
+    "Kan": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (Hof 2) übernimmt Blu"
+     }
+    ],
+    "Keh": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "7a, 4-5. Std.: KU Keh 3.006 für KU Sto"
+     }
+    ],
+    "Kun": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (1./2.E(A)) übernimmt Bur"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "11:50 Uhr Aufsicht EG(N) (für Sto)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 4. Std.: EN Kun 1.105 für BIO Les"
+     }
+    ],
+    "Les": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (E+EG(A)) übernimmt Ste"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (E+EG(A)) übernimmt Rei"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 13:15 Uhr (E+EG(A)) übernimmt Mün"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "5a, 6-7. Std.: --- BIO Les fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9b, 4. Std.: EN Kun 1.105 für BIO Les"
+     }
+    ],
+    "Mün": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "13:15 Uhr Aufsicht E+EG(A) (für Les)"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8b, 4-5. Std.: EN Blu 1.109 verlegt von St.2-3; GEO Mün gehalten am Di (17.11.) St.2-3"
+     }
+    ],
+    "Rei": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 12:10 Uhr (1.E(N)) übernimmt Ebe"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "12:10 Uhr Aufsicht E+EG(A) (für Les)"
+     }
+    ],
+    "Ric": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (1.E(N)) übernimmt Bur"
+     }
+    ],
+    "Sei": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6b, 2-3. Std.: KU Sei 3.006 für KU Sto"
+     }
+    ],
+    "Ste": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (1./2.E(A)) übernimmt Fis"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "09:55 Uhr Aufsicht E+EG(A) (für Les)"
+     }
+    ],
+    "Sto": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (EG(N)) übernimmt Kun"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "6b, 2-3. Std.: KU Sei 3.006 für KU Sto"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "7a, 4-5. Std.: KU Keh 3.006 für KU Sto"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "8c, 6. Std.: GK (Sto) 3.005 selbst. (v)"
+     }
+    ]
+   },
+   "klassen": {
+    "5a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "6.–7. Std.: BIO Les fällt aus"
+     }
+    ],
+    "6b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "2.–3. Std.: KU Sei 3.006 für KU Sto"
+     }
+    ],
+    "7a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "4.–5. Std.: KU Keh 3.006 für KU Sto"
+     }
+    ],
+    "8b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "2.–3. Std.: EN Blu verlegt nach St.4-5"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "4.–5. Std.: EN Blu 1.109 verlegt von St.2-3; GEO Mün gehalten am Di (17.11.) St.2-3"
+     }
+    ],
+    "8c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "6. Std.: GK (Sto) 3.005 selbst. (v)"
+     }
+    ],
+    "9b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "4. Std.: EN Kun 1.105 für BIO Les"
+     }
+    ],
+    "10a": [
+     {
+      "art": "klasse_weg",
+      "handeln": true,
+      "label": "Ganze Klasse",
+      "text": "Klasse ist nicht im Unterricht"
+     },
+     {
+      "art": "hinweis",
+      "handeln": true,
+      "label": "Hinweis",
+      "text": "Zooschule 10a"
      }
     ]
    }
