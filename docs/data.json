@@ -1,6 +1,6 @@
 {
  "schule": "62. Oberschule \"Friedrich Schiller\" Dresden",
- "aktualisiert": "2026-11-25T00:36+01:00",
+ "aktualisiert": "2026-11-25T14:47+01:00",
  "ntfy_server": "https://ntfy.sh",
  "topic_prefix": "os62-b7eb68",
  "vapid_public": "BC0Wo4TvhNW7x8HcJRoQwBw9-7erEWw057Q39ql4OXCJ3VwncN34Le9my6Jw0UJZIGS2SG1BKVnLXVcJG9OgADM",
@@ -637,6 +637,749 @@
       "handeln": true,
       "label": "Entfällt",
       "text": "6.–7. Std.: GK Hof fällt aus"
+     }
+    ]
+   }
+  },
+  {
+   "titel": "Donnerstag, 26. November 2026",
+   "datum": "2026-11-26",
+   "woche": "A-Woche",
+   "erstellt": "25.11.2026",
+   "abwesend": [
+    {
+     "k": "Die",
+     "std": ""
+    },
+    {
+     "k": "Fis",
+     "std": ""
+    },
+    {
+     "k": "Hin",
+     "std": ""
+    },
+    {
+     "k": "Kun",
+     "std": ""
+    }
+   ],
+   "geaendert": [
+    "Bur",
+    "Fra",
+    "Jag",
+    "Kan",
+    "Küh",
+    "Les",
+    "MülB",
+    "Rei",
+    "Ric",
+    "Schr",
+    "Sei",
+    "Ste",
+    "Sto",
+    "Zim"
+   ],
+   "aufsichten": [
+    {
+     "zeit": "07:15",
+     "ort": "1./2.E(A)",
+     "wer": "Kan",
+     "fuer": "Ric"
+    },
+    {
+     "zeit": "07:15",
+     "ort": "1.E(N)",
+     "wer": "Küh",
+     "fuer": "Die"
+    },
+    {
+     "zeit": "07:15",
+     "ort": "E+EG(A)",
+     "wer": "Les",
+     "fuer": "MülB"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "1./2.E(A)",
+     "wer": "entfällt",
+     "fuer": "Ste"
+    },
+    {
+     "zeit": "09:55",
+     "ort": "1.E(N)",
+     "wer": "Ste",
+     "fuer": "Fis"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "1./2.E(A)",
+     "wer": "Bur",
+     "fuer": "Kun"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "1.E(N)",
+     "wer": "entfällt",
+     "fuer": "Bur"
+    },
+    {
+     "zeit": "11:50",
+     "ort": "Essen",
+     "wer": "Ric",
+     "fuer": "Die"
+    },
+    {
+     "zeit": "14:05",
+     "ort": "EG(N)",
+     "wer": "Sei",
+     "fuer": "Die"
+    }
+   ],
+   "zeilen": [
+    {
+     "klasse": "5b",
+     "std": "5",
+     "text": "DE Zim 1.103 Zahnarzt in kleinen Gruppen",
+     "roh": "5b 5 DE Zim 1.103 Zahnarzt in kleinen Gruppen"
+    },
+    {
+     "klasse": "5c",
+     "std": "2",
+     "text": "DE Schr 1.201 Zahnarzt in kleinen Gruppen",
+     "roh": "5c 2 DE Schr 1.201 Zahnarzt in kleinen Gruppen"
+    },
+    {
+     "klasse": "6a",
+     "std": "3",
+     "text": "MA Jag 1.004 Zahnarzt in kleinen Gruppen",
+     "roh": "6a 3 MA Jag 1.004 Zahnarzt in kleinen Gruppen"
+    },
+    {
+     "klasse": "6c",
+     "std": "7",
+     "text": "--- DE Fis fällt aus",
+     "roh": "6c 7 --- DE Fis fällt aus"
+    },
+    {
+     "klasse": "7b",
+     "std": "4",
+     "text": "WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig; Zahnarzt in kleinen Gruppen",
+     "roh": "7b 4 WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig; Zahnarzt in kleinen Gruppen"
+    },
+    {
+     "klasse": "7b",
+     "std": "4",
+     "text": "WTH Rei 1.K10 Zahnarzt in kleinen Gruppen",
+     "roh": "7b 4 WTH Rei 1.K10 Zahnarzt in kleinen Gruppen"
+    },
+    {
+     "klasse": "7b",
+     "std": "5",
+     "text": "WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig",
+     "roh": "7b 5 WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig"
+    },
+    {
+     "klasse": "7c",
+     "std": "1",
+     "text": "--- BIO MülB gehalten am Di (24.11.) St.5",
+     "roh": "7c 1 --- BIO MülB gehalten am Di (24.11.) St.5"
+    },
+    {
+     "klasse": "7c",
+     "std": "6-7",
+     "text": "--- WTH Hin fällt aus",
+     "roh": "7c 6-7 --- WTH Hin fällt aus"
+    },
+    {
+     "klasse": "8a",
+     "std": "2-3",
+     "text": "--- DE Fis fällt aus",
+     "roh": "8a 2-3 --- DE Fis fällt aus"
+    },
+    {
+     "klasse": "8a",
+     "std": "6",
+     "text": "INF Fra 3.012 für INF Die",
+     "roh": "8a 6 INF Fra 3.012 für INF Die"
+    },
+    {
+     "klasse": "8c",
+     "std": "1",
+     "text": "--- GE Ric verlegt nach St.4",
+     "roh": "8c 1 --- GE Ric verlegt nach St.4"
+    },
+    {
+     "klasse": "8c",
+     "std": "4",
+     "text": "GE Ric 1.104 verlegt von St.1; DE Fis fällt aus",
+     "roh": "8c 4 GE Ric 1.104 verlegt von St.1; DE Fis fällt aus"
+    },
+    {
+     "klasse": "8c",
+     "std": "5",
+     "text": "GE Ric 1.104 statt Do (03.12.) St.1; DE Fis fällt aus",
+     "roh": "8c 5 GE Ric 1.104 statt Do (03.12.) St.1; DE Fis fällt aus"
+    },
+    {
+     "klasse": "8c",
+     "std": "7",
+     "text": "GK Sto 3.005 verlegt von 19.11.2026",
+     "roh": "8c 7 GK Sto 3.005 verlegt von 19.11.2026"
+    },
+    {
+     "klasse": "9a",
+     "std": "4",
+     "text": "INF Fra 3.012 für INF Die",
+     "roh": "9a 4 INF Fra 3.012 für INF Die"
+    },
+    {
+     "klasse": "9b",
+     "std": "5",
+     "text": "INF Fra 3.112 für INF Die",
+     "roh": "9b 5 INF Fra 3.112 für INF Die"
+    },
+    {
+     "klasse": "9c",
+     "std": "6",
+     "text": "--- ETH Fis fällt aus",
+     "roh": "9c 6 --- ETH Fis fällt aus"
+    },
+    {
+     "klasse": "9c",
+     "std": "7",
+     "text": "--- INF Die fällt aus",
+     "roh": "9c 7 --- INF Die fällt aus"
+    },
+    {
+     "klasse": "10a",
+     "std": "3",
+     "text": "INF Fra 3.012 für INF Die",
+     "roh": "10a 3 INF Fra 3.012 für INF Die"
+    },
+    {
+     "klasse": "10b",
+     "std": "1",
+     "text": "INF (Die) 3.012 selbst. (v), Aufgaben mit Hr.Gruhl",
+     "roh": "10b 1 INF (Die) 3.012 selbst. (v), Aufgaben mit Hr.Gruhl"
+    },
+    {
+     "klasse": "10c",
+     "std": "2",
+     "text": "INF Fra 3.012 für INF Die",
+     "roh": "10c 2 INF Fra 3.012 für INF Die"
+    }
+   ],
+   "hinweise": [
+    "Zahnarzt: Bitte an die ausgefüllten Formulare denken!",
+    "Sprechstunde Berufsorientierung mit Fr.Graber in 1.101",
+    "DAZ-Schüler bleiben im Klassenverband"
+   ],
+   "abwesende_klassen": [],
+   "pdf": "pdf/plan-2026-11-26.pdf",
+   "quelle": "https://cms.sachsen.schule/fileadmin/_special/benutzer/1799/vertretungsplan/Vertretungsplan_Sch%C3%BCler2026-11-26.pdf",
+   "sha": "fdd4ea35c445",
+   "lehrer": {
+    "Bur": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "11:50 Uhr Aufsicht 1./2.E(A) (für Kun)"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (1.E(N)) entfällt"
+     }
+    ],
+    "Die": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 07:15 Uhr (1.E(N)) übernimmt Küh"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (Essen) übernimmt Ric"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 14:05 Uhr (EG(N)) übernimmt Sei"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "8a, 6. Std.: INF Fra 3.012 für INF Die"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9a, 4. Std.: INF Fra 3.012 für INF Die"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "9b, 5. Std.: INF Fra 3.112 für INF Die"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "9c, 7. Std.: --- INF Die fällt aus"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "10a, 3. Std.: INF Fra 3.012 für INF Die"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "10b, 1. Std.: INF (Die) 3.012 selbst. (v), Aufgaben mit Hr.Gruhl"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "10c, 2. Std.: INF Fra 3.012 für INF Die"
+     }
+    ],
+    "Fis": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (1.E(N)) übernimmt Ste"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "6c, 7. Std.: --- DE Fis fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8a, 2-3. Std.: --- DE Fis fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8c, 4. Std.: GE Ric 1.104 verlegt von St.1; DE Fis fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "8c, 5. Std.: GE Ric 1.104 statt Do (03.12.) St.1; DE Fis fällt aus"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "9c, 6. Std.: --- ETH Fis fällt aus"
+     }
+    ],
+    "Fra": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8a, 6. Std.: INF Fra 3.012 für INF Die"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9a, 4. Std.: INF Fra 3.012 für INF Die"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "9b, 5. Std.: INF Fra 3.112 für INF Die"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "10a, 3. Std.: INF Fra 3.012 für INF Die"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "10c, 2. Std.: INF Fra 3.012 für INF Die"
+     }
+    ],
+    "Graber": [
+     {
+      "art": "hinweis",
+      "handeln": true,
+      "label": "Hinweis",
+      "text": "Sprechstunde Berufsorientierung mit Fr.Graber in 1.101"
+     }
+    ],
+    "Gruhl": [
+     {
+      "art": "erwaehnt",
+      "handeln": true,
+      "label": "Du bist erwähnt",
+      "text": "10b, 1. Std.: INF (Die) 3.012 selbst. (v), Aufgaben mit Hr.Gruhl"
+     }
+    ],
+    "Hin": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "7b, 4. Std.: WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig; Zahnarzt in kleinen Gruppen"
+     },
+     {
+      "art": "vertreten",
+      "handeln": false,
+      "label": "Deine Stunde wird vertreten",
+      "text": "7b, 5. Std.: WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7c, 6-7. Std.: --- WTH Hin fällt aus"
+     }
+    ],
+    "Jag": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "6a, 3. Std.: MA Jag 1.004 Zahnarzt in kleinen Gruppen"
+     }
+    ],
+    "Kan": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "07:15 Uhr Aufsicht 1./2.E(A) (für Ric)"
+     }
+    ],
+    "Kun": [
+     {
+      "art": "abwesend",
+      "handeln": false,
+      "text": "Du bist als abwesend eingetragen"
+     },
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 11:50 Uhr (1./2.E(A)) übernimmt Bur"
+     }
+    ],
+    "Küh": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "07:15 Uhr Aufsicht 1.E(N) (für Die)"
+     }
+    ],
+    "Les": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "07:15 Uhr Aufsicht E+EG(A) (für MülB)"
+     }
+    ],
+    "MülB": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 07:15 Uhr (E+EG(A)) übernimmt Les"
+     },
+     {
+      "art": "faellt_aus",
+      "handeln": false,
+      "label": "Deine Stunde entfällt",
+      "text": "7c, 1. Std.: --- BIO MülB gehalten am Di (24.11.) St.5"
+     }
+    ],
+    "Rei": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "7b, 4. Std.: WTH Rei 1.K10 Zahnarzt in kleinen Gruppen"
+     }
+    ],
+    "Reißig": [
+     {
+      "art": "erwaehnt",
+      "handeln": true,
+      "label": "Du bist erwähnt",
+      "text": "7b, 4. Std.: WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig; Zahnarzt in kleinen Gruppen"
+     },
+     {
+      "art": "erwaehnt",
+      "handeln": true,
+      "label": "Du bist erwähnt",
+      "text": "7b, 5. Std.: WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig"
+     }
+    ],
+    "Ric": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 07:15 Uhr (1./2.E(A)) übernimmt Kan"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "11:50 Uhr Aufsicht Essen (für Die)"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 1. Std.: --- GE Ric verlegt nach St.4"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 4. Std.: GE Ric 1.104 verlegt von St.1; DE Fis fällt aus"
+     },
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 5. Std.: GE Ric 1.104 statt Do (03.12.) St.1; DE Fis fällt aus"
+     }
+    ],
+    "Schr": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "5c, 2. Std.: DE Schr 1.201 Zahnarzt in kleinen Gruppen"
+     }
+    ],
+    "Sei": [
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "14:05 Uhr Aufsicht EG(N) (für Die)"
+     }
+    ],
+    "Ste": [
+     {
+      "art": "aufsicht_frei",
+      "handeln": false,
+      "text": "Deine Aufsicht 09:55 Uhr (1./2.E(A)) entfällt"
+     },
+     {
+      "art": "aufsicht",
+      "handeln": true,
+      "text": "09:55 Uhr Aufsicht 1.E(N) (für Fis)"
+     }
+    ],
+    "Sto": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "8c, 7. Std.: GK Sto 3.005 verlegt von 19.11.2026"
+     }
+    ],
+    "Zim": [
+     {
+      "art": "unterricht",
+      "handeln": true,
+      "label": "Geänderter Unterricht",
+      "text": "5b, 5. Std.: DE Zim 1.103 Zahnarzt in kleinen Gruppen"
+     }
+    ]
+   },
+   "klassen": {
+    "5b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "5. Std.: DE Zim 1.103 Zahnarzt in kleinen Gruppen"
+     }
+    ],
+    "5c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "2. Std.: DE Schr 1.201 Zahnarzt in kleinen Gruppen"
+     }
+    ],
+    "6a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "3. Std.: MA Jag 1.004 Zahnarzt in kleinen Gruppen"
+     }
+    ],
+    "6c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "7. Std.: DE Fis fällt aus"
+     }
+    ],
+    "7b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "4. Std.: WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig; Zahnarzt in kleinen Gruppen"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "4. Std.: WTH Rei 1.K10 Zahnarzt in kleinen Gruppen"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "5. Std.: WTH (Hin) 1.K05 selbst. (v), Aufgaben mit Hr.Reißig"
+     }
+    ],
+    "7c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt (vorgeholt)",
+      "text": "1. Std.: BIO MülB gehalten am Di (24.11.) St.5"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "6.–7. Std.: WTH Hin fällt aus"
+     }
+    ],
+    "8a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "2.–3. Std.: DE Fis fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "6. Std.: INF Fra 3.012 für INF Die"
+     }
+    ],
+    "8c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "1. Std.: GE Ric verlegt nach St.4"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "4. Std.: GE Ric 1.104 verlegt von St.1; DE Fis fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Änderung",
+      "text": "5. Std.: GE Ric 1.104 statt Do (03.12.) St.1; DE Fis fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Verlegt",
+      "text": "7. Std.: GK Sto 3.005 verlegt von 19.11.2026"
+     }
+    ],
+    "9a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "4. Std.: INF Fra 3.012 für INF Die"
+     }
+    ],
+    "9b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "5. Std.: INF Fra 3.112 für INF Die"
+     }
+    ],
+    "9c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "6. Std.: ETH Fis fällt aus"
+     },
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Entfällt",
+      "text": "7. Std.: INF Die fällt aus"
+     }
+    ],
+    "10a": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "3. Std.: INF Fra 3.012 für INF Die"
+     }
+    ],
+    "10b": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Selbstständig",
+      "text": "1. Std.: INF (Die) 3.012 selbst. (v), Aufgaben mit Hr.Gruhl"
+     }
+    ],
+    "10c": [
+     {
+      "art": "stunde",
+      "handeln": true,
+      "label": "Vertretung",
+      "text": "2. Std.: INF Fra 3.012 für INF Die"
      }
     ]
    }
